@@ -1,0 +1,61 @@
+
+;; ----- smex-history -----
+(
+ find-file
+ magit
+ org-agenda-list
+ list-colors-display
+ view-buffer
+ yas-new-snippet
+ yas-reload-all
+)
+
+;; ----- smex-data -----
+(
+ (view-buffer . 7)
+ (cnfonts-mode . 2)
+ (cnfonts-increase-fontsize . 10)
+ (cnfonts-set-font . 1)
+ (cnfonts-edit-profile . 12)
+ (evil-toggle-fold . 1)
+ (vimish-fold . 2)
+ (recentf-mode . 1)
+ (recentf-open-more-files . 1)
+ (recentf-open-files . 2)
+ (recentf-load-list . 1)
+ (counsel-recentf . 1)
+ (org-roam-db-sync . 2)
+ (org-roam-node-find . 4)
+ (org-roam-node-open . 1)
+ (org-roam-node-visit . 4)
+ (org-roam-buffer-toggle . 1)
+ (org-open-at-point . 1)
+ (linum-mode . 6)
+ (valign-mode . 8)
+ (org-indent-mode . 4)
+ (global-linum-mode . 9)
+ (variable-pitch-mode . 14)
+ (visual-line-mode . 7)
+ (org-roam-visit-thing . 1)
+ (calc-truncate-up . 1)
+ (prettify-symbols-mode . 2)
+ (list-colors-display . 6)
+ (evil-ret . 1)
+ (org-return . 2)
+ (cnfonts-ui . 1)
+ (ns-find-file . 1)
+ (yas-expand . 16)
+ (yas/expand . 4)
+ (yas-visit-snippet-file . 3)
+ (yas-expand-from-keymap . 1)
+ (yas-expand-from-trigger-key . 3)
+ (yas-minor-mode . 2)
+ (yas-insert-snippet . 1)
+ (yas-new-snippet . 3)
+ (yas-reload-all . 6)
+ (yas-load-directory . 4)
+ (yas-load-snippet-buffer . 2)
+ (magit . 3)
+ (org-agenda-list . 2)
+ (find-file . 1)
+)

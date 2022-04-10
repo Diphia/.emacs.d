@@ -1,0 +1,66 @@
+[submodule "lisp/evil"]
+	path = lisp/evil
+	url = git@github.com:emacs-evil/evil.git
+[submodule "lisp/evil-leader"]
+	path = lisp/evil-leader
+	url = git@github.com:cofi/evil-leader.git
+[submodule "lisp/evil-snipe"]
+	path = lisp/evil-snipe
+	url = git@github.com:hlissner/evil-snipe.git
+[submodule "lisp/evil-collection"]
+	path = lisp/evil-collection
+	url = git@github.com:emacs-evil/evil-collection.git
+[submodule "lisp/swiper"]
+	path = lisp/swiper
+	url = git@github.com:abo-abo/swiper.git
+[submodule "lisp/smex"]
+	path = lisp/smex
+	url = git@github.com:nonsequitur/smex.git
+[submodule "lisp/emacs-which-key"]
+	path = lisp/emacs-which-key
+	url = git@github.com:justbur/emacs-which-key.git
+[submodule "lisp/linum-relative"]
+	path = lisp/linum-relative
+	url = git@github.com:coldnew/linum-relative.git
+[submodule "lisp/annalist.el"]
+	path = lisp/annalist.el
+	url = git@github.com:noctuid/annalist.el.git
+[submodule "lisp/evil-vimish-fold"]
+	path = lisp/evil-vimish-fold
+	url = git@github.com:alexmurray/evil-vimish-fold.git
+[submodule "lisp/vimish-fold"]
+	path = lisp/vimish-fold
+	url = git@github.com:matsievskiysv/vimish-fold.git
+[submodule "lisp/f.el"]
+	path = lisp/f.el
+	url = git@github.com:rejeep/f.el.git
+[submodule "lisp/s.el"]
+	path = lisp/s.el
+	url = git@github.com:magnars/s.el.git
+[submodule "lisp/dash.el"]
+	path = lisp/dash.el
+	url = git@github.com:magnars/dash.el.git
+[submodule "lisp/org-roam"]
+	path = lisp/org-roam
+	url = git@github.com:org-roam/org-roam.git
+[submodule "lisp/magit"]
+	path = lisp/magit
+	url = git@github.com:magit/magit.git
+[submodule "lisp/transient"]
+	path = lisp/transient
+	url = git@github.com:magit/transient.git
+[submodule "lisp/with-editor"]
+	path = lisp/with-editor
+	url = git@github.com:magit/with-editor.git
+[submodule "lisp/emacsql"]
+	path = lisp/emacsql
+	url = git@github.com:skeeto/emacsql.git
+[submodule "lisp/org-bullets"]
+	path = lisp/org-bullets
+	url = git@github.com:sabof/org-bullets.git
+[submodule "lisp/valign"]
+	path = lisp/valign
+	url = git@github.com:casouri/valign.git
+[submodule "lisp/yasnippet"]
+	path = lisp/yasnippet
+	url = git@github.com:joaotavora/yasnippet.git
