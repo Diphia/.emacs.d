@@ -31,6 +31,9 @@
 (add-to-list 'load-path (expand-file-name "lisp/org-bullets" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "lisp/org-roam" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "lisp/yasnippet" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "lisp/dockerfile-mode" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "lisp/yaml-mode" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "lisp/projectile" user-emacs-directory))
 
 (defconst *spell-check-support-enabled* nil) ;; Enable with t if you prefer
 (defconst *is-a-mac* (eq system-type 'darwin))
@@ -76,6 +79,15 @@
  '(org-agenda-files (list "/Users/diphia/org-files/agenda.org")))
 
 (require 'ox-confluence)
+
+(require 'dockerfile-mode)
+(add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
+
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+
+(require 'projectile)
+(projectile-mode)
 
 (provide 'init)
 ;;; init.el ends here

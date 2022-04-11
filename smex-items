@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ projectile-find-file
+ org-confluence-export-as-confluence
+ prettify-symbols-mode
+ counsel-recentf
+ org-roam-node-insert
+ yas-insert-snippet
  find-file
- magit
- org-agenda-list
- list-colors-display
- view-buffer
- yas-new-snippet
- yas-reload-all
 )
 
 ;; ----- smex-data -----
@@ -23,7 +23,7 @@
  (recentf-open-more-files . 1)
  (recentf-open-files . 2)
  (recentf-load-list . 1)
- (counsel-recentf . 1)
+ (counsel-recentf . 2)
  (org-roam-db-sync . 2)
  (org-roam-node-find . 4)
  (org-roam-node-open . 1)
@@ -38,7 +38,7 @@
  (visual-line-mode . 7)
  (org-roam-visit-thing . 1)
  (calc-truncate-up . 1)
- (prettify-symbols-mode . 2)
+ (prettify-symbols-mode . 4)
  (list-colors-display . 6)
  (evil-ret . 1)
  (org-return . 2)
@@ -50,7 +50,7 @@
  (yas-expand-from-keymap . 1)
  (yas-expand-from-trigger-key . 3)
  (yas-minor-mode . 2)
- (yas-insert-snippet . 1)
+ (yas-insert-snippet . 2)
  (yas-new-snippet . 3)
  (yas-reload-all . 6)
  (yas-load-directory . 4)
@@ -58,4 +58,7 @@
  (magit . 3)
  (org-agenda-list . 2)
  (find-file . 1)
+ (org-confluence-export-as-confluence . 3)
+ (org-roam-node-insert . 1)
+ (projectile-find-file . 1)
 )

@@ -64,3 +64,12 @@
 [submodule "lisp/yasnippet"]
 	path = lisp/yasnippet
 	url = git@github.com:joaotavora/yasnippet.git
+[submodule "lisp/dockerfile-mode"]
+	path = lisp/dockerfile-mode
+	url = git@github.com:spotify/dockerfile-mode.git
+[submodule "lisp/yaml-mode"]
+	path = lisp/yaml-mode
+	url = git@github.com:yoshiki/yaml-mode.git
+[submodule "lisp/projectile"]
+	path = lisp/projectile
+	url = git@github.com:bbatsov/projectile.git
