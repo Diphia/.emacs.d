@@ -25,6 +25,11 @@
 (require 'evil)
 (evil-mode 1)
 
+(define-key evil-window-map "\C-h" 'evil-window-left)
+(define-key evil-window-map "\C-j" 'evil-window-down)
+(define-key evil-window-map "\C-k" 'evil-window-up)
+(define-key evil-window-map "\C-l" 'evil-window-right)
+
 (require 'vimish-fold)
 (vimish-fold-global-mode 1)
 (require 'evil-vimish-fold)
@@ -35,6 +40,21 @@
 (evil-snipe-mode +1)
 (evil-snipe-override-mode +1)
 
+(defun open-temp-python ()
+  "Quick open a temp python file."
+  (interactive)
+  (find-file "/tmp/test.py"))
+
+(defun switch-to-scratch()
+  "Quick open a scratch buffer."
+  (interactive)
+  (switch-to-buffer "*scratch*"))
+
+(defun open-init-config ()
+  "Quick open init.el ."
+  (interactive)
+  (find-file "~/.emacs.d/init.el"))
+
 (require 'evil-leader)
 (evil-leader/set-leader "<SPC>")
 (global-evil-leader-mode)
@@ -43,13 +63,19 @@
   "bd" 'kill-current-buffer
   "ff" 'find-file
   "fr" 'counsel-recentf
+  "fp" 'open-init-config
   "gg" 'magit-status
+  "tp" 'open-temp-python
   "nrf" 'org-roam-node-find
   "nrr" 'org-roam-buffer-toggle
   "mdt" 'org-time-stamp
   "mdT" 'org-time-stamp-inactive
   "oaa" 'org-agenda-list
-  "sb" 'swiper)
+  "sb" 'swiper
+  "sd" 'counsel-rg
+  "sf" 'counsel-locate
+  "sp" 'counsel-projectile-rg
+  "x" 'switch-to-scratch)
 (setcdr evil-insert-state-map nil)
 (define-key evil-insert-state-map [escape] 'evil-normal-state)
 (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)

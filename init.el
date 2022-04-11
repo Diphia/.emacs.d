@@ -34,6 +34,7 @@
 (add-to-list 'load-path (expand-file-name "lisp/dockerfile-mode" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "lisp/yaml-mode" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "lisp/projectile" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "lisp/counsel-projectile" user-emacs-directory))
 
 (defconst *spell-check-support-enabled* nil) ;; Enable with t if you prefer
 (defconst *is-a-mac* (eq system-type 'darwin))
@@ -55,6 +56,7 @@
 (require 'ivy)
 (ivy-mode)
 (define-key ivy-minibuffer-map [escape] 'minibuffer-keyboard-quit) ;; use escape key to quit minibuffer
+(setq ivy-height 20)
 (setq ivy-initial-inputs-alist nil) ;; by default, ivy will add ^ to restrict the start of string (regex), add this line to remove it
 
 (require 'counsel)
@@ -88,6 +90,8 @@
 
 (require 'projectile)
 (projectile-mode)
+
+(require 'counsel-projectile)
 
 (provide 'init)
 ;;; init.el ends here

@@ -1,1 +1,1 @@
-("/Users/diphia/OneDrive/org-files/")
+("/Users/diphia/OneDrive/org-files/" "~/.emacs.d/")
