@@ -59,6 +59,8 @@
 (evil-leader/set-leader "<SPC>")
 (global-evil-leader-mode)
 (evil-leader/set-key
+  "<SPC>" 'projectile-find-file
+  "`" 'evil-switch-to-windows-last-buffer
   "bb" 'switch-to-buffer
   "bd" 'kill-current-buffer
   "ff" 'find-file
