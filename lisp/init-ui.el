@@ -25,11 +25,9 @@
 (setq frame-title-format '("Org Mode\n"))
 (set-face-attribute 'default nil :font "Menlo" :height 180);;
 
-;;(require 'linum-relative)
-;;(linum-mode)
-;;(linum-relative-global-mode)
-
-;;(setq-default mode-line-format nil)
+(add-hook 'prog-mode-hook 'linum-mode)
+(add-hook 'prog-mode-hook 'show-paren-mode)
+(add-hook 'org-mode-hook (lambda () (show-paren-mode 0)))
 
 ;; replace - with • in list
 (font-lock-add-keywords 'org-mode
@@ -89,6 +87,7 @@
 
 (add-hook 'org-mode-hook 'variable-pitch-mode)
 (add-hook 'org-mode-hook 'org-indent-mode)
+(setq org-list-indent-offset 2)
 
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
@@ -106,10 +105,10 @@
            (org-element-property :raw-link object)))))
 (add-hook 'post-command-hook 'link-message)
 
-(defun nolinum ()
-  (global-linum-mode 0)
-)
-(add-hook 'org-mode-hook 'nolinum)
+
+(setq scroll-step            1
+      scroll-conservatively  10000)
+(setq scroll-margin 10)
 
 (provide 'init-ui)
 ;;; init-ui.el ends here

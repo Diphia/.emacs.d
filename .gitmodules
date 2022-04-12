@@ -76,3 +76,6 @@
 [submodule "lisp/counsel-projectile"]
 	path = lisp/counsel-projectile
 	url = git@github.com:ericdanan/counsel-projectile.git
+[submodule "lisp/lua-mode"]
+	path = lisp/lua-mode
+	url = git@github.com:immerrr/lua-mode.git

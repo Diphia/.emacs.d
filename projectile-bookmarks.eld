@@ -1,1 +1,1 @@
-("/Users/diphia/OneDrive/org-files/" "~/.emacs.d/")
+("/Users/diphia/OneDrive/org-files/" "~/.emacs.d/" "/Users/diphia/dotfiles/" "/opt/homebrew/" "/Users/diphia/.emacs.d/" "~/.emacs.d/lisp/counsel-projectile/" "~/.emacs.d/lisp/projectile/")

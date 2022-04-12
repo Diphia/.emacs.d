@@ -40,6 +40,10 @@
 (evil-snipe-mode +1)
 (evil-snipe-override-mode +1)
 
+(add-hook 'org-mode-hook
+  (lambda ()
+   (local-set-key [s-return] 'org-insert-item)))
+
 (defun open-temp-python ()
   "Quick open a temp python file."
   (interactive)
@@ -59,7 +63,7 @@
 (evil-leader/set-leader "<SPC>")
 (global-evil-leader-mode)
 (evil-leader/set-key
-  "<SPC>" 'projectile-find-file
+  "<SPC>" 'counsel-git
   "`" 'evil-switch-to-windows-last-buffer
   "bb" 'switch-to-buffer
   "bd" 'kill-current-buffer

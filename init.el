@@ -33,6 +33,7 @@
 (add-to-list 'load-path (expand-file-name "lisp/yasnippet" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "lisp/dockerfile-mode" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "lisp/yaml-mode" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "lisp/lua-mode" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "lisp/projectile" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "lisp/counsel-projectile" user-emacs-directory))
 
@@ -88,10 +89,16 @@
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 
+(require 'lua-mode)
+(add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
+(add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
+
+
 (require 'projectile)
 (projectile-mode)
 
 (require 'counsel-projectile)
+
 
 (provide 'init)
 ;;; init.el ends here
