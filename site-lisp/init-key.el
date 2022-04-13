@@ -82,7 +82,8 @@
   "sb" 'swiper
   "sd" 'counsel-rg
   "sp" 'counsel-projectile-rg
-  "x" 'switch-to-scratch)
+  "x" 'switch-to-scratch
+  "?" 'counsel-describe-function)
 (setcdr evil-insert-state-map nil)
 (define-key evil-insert-state-map [escape] 'evil-normal-state)
 (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
