@@ -79,3 +79,9 @@
 [submodule "lisp/lua-mode"]
 	path = lisp/lua-mode
 	url = git@github.com:immerrr/lua-mode.git
+[submodule "lisp/json-mode"]
+	path = lisp/json-mode
+	url = git@github.com:joshwnj/json-mode.git
+[submodule "lisp/json-snatcher"]
+	path = lisp/json-snatcher
+	url = git@github.com:Sterlingg/json-snatcher.git

@@ -34,6 +34,8 @@
 (add-to-list 'load-path (expand-file-name "lisp/dockerfile-mode" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "lisp/yaml-mode" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "lisp/lua-mode" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "lisp/json-snatcher" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "lisp/json-mode" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "lisp/projectile" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "lisp/counsel-projectile" user-emacs-directory))
 
@@ -93,6 +95,8 @@
 (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
 (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
 
+(require 'json-mode)
+(add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
 
 (require 'projectile)
 (projectile-mode)

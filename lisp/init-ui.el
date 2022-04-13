@@ -89,13 +89,13 @@
 (add-hook 'org-mode-hook 'org-indent-mode)
 (setq org-list-indent-offset 2)
 
+(setq org-bullets-bullet-list '("◉" "○" "◇" "✿" "✸" ""))
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
-(setq org-bullets-bullet-list '("◉" "○" "◇" "✿" "✸" ""))
 
+(setq valign-fancy-bar t)
 (require 'valign)
 (add-hook 'org-mode-hook #'valign-mode)
-(setq valign-fancy-bar t)
 
 ;; show link message when hovering
 (defun link-message ()
@@ -104,7 +104,6 @@
       (message "%s"
            (org-element-property :raw-link object)))))
 (add-hook 'post-command-hook 'link-message)
-
 
 (setq scroll-step            1
       scroll-conservatively  10000)

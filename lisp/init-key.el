@@ -32,8 +32,9 @@
 
 (require 'vimish-fold)
 (vimish-fold-global-mode 1)
-(require 'evil-vimish-fold)
+
 (setq evil-vimish-fold-target-modes '(prog-mode conf-mode text-mode))
+(require 'evil-vimish-fold)
 (global-evil-vimish-fold-mode 1)
 
 (require 'evil-snipe)
@@ -92,6 +93,7 @@
 (evil-collection-init)
 
 (setq org-return-follows-link t)
+
 (with-eval-after-load 'evil-maps
   (define-key evil-motion-state-map (kbd "SPC") nil)
   (define-key evil-motion-state-map (kbd "RET") nil)
