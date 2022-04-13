@@ -78,6 +78,7 @@
   "mdt" 'org-time-stamp
   "mdT" 'org-time-stamp-inactive
   "oaa" 'org-agenda-list
+  "pp" 'projectile-switch-project
   "sb" 'swiper
   "sd" 'counsel-rg
   "sp" 'counsel-projectile-rg
