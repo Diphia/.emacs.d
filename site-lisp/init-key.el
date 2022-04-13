@@ -80,7 +80,6 @@
   "oaa" 'org-agenda-list
   "sb" 'swiper
   "sd" 'counsel-rg
-  "sf" 'counsel-locate
   "sp" 'counsel-projectile-rg
   "x" 'switch-to-scratch)
 (setcdr evil-insert-state-map nil)

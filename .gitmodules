@@ -1,87 +1,90 @@
 [submodule "lisp/evil"]
-	path = lisp/evil
+	path = site-lisp/evil
 	url = git@github.com:emacs-evil/evil.git
 [submodule "lisp/evil-leader"]
-	path = lisp/evil-leader
+	path = site-lisp/evil-leader
 	url = git@github.com:cofi/evil-leader.git
 [submodule "lisp/evil-snipe"]
-	path = lisp/evil-snipe
+	path = site-lisp/evil-snipe
 	url = git@github.com:hlissner/evil-snipe.git
 [submodule "lisp/evil-collection"]
-	path = lisp/evil-collection
+	path = site-lisp/evil-collection
 	url = git@github.com:emacs-evil/evil-collection.git
 [submodule "lisp/swiper"]
-	path = lisp/swiper
+	path = site-lisp/swiper
 	url = git@github.com:abo-abo/swiper.git
 [submodule "lisp/smex"]
-	path = lisp/smex
+	path = site-lisp/smex
 	url = git@github.com:nonsequitur/smex.git
 [submodule "lisp/emacs-which-key"]
-	path = lisp/emacs-which-key
+	path = site-lisp/emacs-which-key
 	url = git@github.com:justbur/emacs-which-key.git
 [submodule "lisp/linum-relative"]
-	path = lisp/linum-relative
+	path = site-lisp/linum-relative
 	url = git@github.com:coldnew/linum-relative.git
 [submodule "lisp/annalist.el"]
-	path = lisp/annalist.el
+	path = site-lisp/annalist.el
 	url = git@github.com:noctuid/annalist.el.git
 [submodule "lisp/evil-vimish-fold"]
-	path = lisp/evil-vimish-fold
+	path = site-lisp/evil-vimish-fold
 	url = git@github.com:alexmurray/evil-vimish-fold.git
 [submodule "lisp/vimish-fold"]
-	path = lisp/vimish-fold
+	path = site-lisp/vimish-fold
 	url = git@github.com:matsievskiysv/vimish-fold.git
 [submodule "lisp/f.el"]
-	path = lisp/f.el
+	path = site-lisp/f.el
 	url = git@github.com:rejeep/f.el.git
 [submodule "lisp/s.el"]
-	path = lisp/s.el
+	path = site-lisp/s.el
 	url = git@github.com:magnars/s.el.git
 [submodule "lisp/dash.el"]
-	path = lisp/dash.el
+	path = site-lisp/dash.el
 	url = git@github.com:magnars/dash.el.git
 [submodule "lisp/org-roam"]
-	path = lisp/org-roam
+	path = site-lisp/org-roam
 	url = git@github.com:org-roam/org-roam.git
 [submodule "lisp/magit"]
-	path = lisp/magit
+	path = site-lisp/magit
 	url = git@github.com:magit/magit.git
 [submodule "lisp/transient"]
-	path = lisp/transient
+	path = site-lisp/transient
 	url = git@github.com:magit/transient.git
 [submodule "lisp/with-editor"]
-	path = lisp/with-editor
+	path = site-lisp/with-editor
 	url = git@github.com:magit/with-editor.git
 [submodule "lisp/emacsql"]
-	path = lisp/emacsql
+	path = site-lisp/emacsql
 	url = git@github.com:skeeto/emacsql.git
 [submodule "lisp/org-bullets"]
-	path = lisp/org-bullets
+	path = site-lisp/org-bullets
 	url = git@github.com:sabof/org-bullets.git
 [submodule "lisp/valign"]
-	path = lisp/valign
+	path = site-lisp/valign
 	url = git@github.com:casouri/valign.git
 [submodule "lisp/yasnippet"]
-	path = lisp/yasnippet
+	path = site-lisp/yasnippet
 	url = git@github.com:joaotavora/yasnippet.git
 [submodule "lisp/dockerfile-mode"]
-	path = lisp/dockerfile-mode
+	path = site-lisp/dockerfile-mode
 	url = git@github.com:spotify/dockerfile-mode.git
 [submodule "lisp/yaml-mode"]
-	path = lisp/yaml-mode
+	path = site-lisp/yaml-mode
 	url = git@github.com:yoshiki/yaml-mode.git
 [submodule "lisp/projectile"]
-	path = lisp/projectile
+	path = site-lisp/projectile
 	url = git@github.com:bbatsov/projectile.git
 [submodule "lisp/counsel-projectile"]
-	path = lisp/counsel-projectile
+	path = site-lisp/counsel-projectile
 	url = git@github.com:ericdanan/counsel-projectile.git
 [submodule "lisp/lua-mode"]
-	path = lisp/lua-mode
+	path = site-lisp/lua-mode
 	url = git@github.com:immerrr/lua-mode.git
 [submodule "lisp/json-mode"]
-	path = lisp/json-mode
+	path = site-lisp/json-mode
 	url = git@github.com:joshwnj/json-mode.git
 [submodule "lisp/json-snatcher"]
-	path = lisp/json-snatcher
+	path = site-lisp/json-snatcher
 	url = git@github.com:Sterlingg/json-snatcher.git
+[submodule "site-lisp/company-mode"]
+	path = site-lisp/company-mode
+	url = git@github.com:company-mode/company-mode.git
