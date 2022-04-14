@@ -99,6 +99,9 @@
 (require 'json-mode)
 (add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
 
+(setq python-shell-interpreter "python3")
+(setq python-indent 4)
+
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
 
