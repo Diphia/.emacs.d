@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: image for confluence
+# key: imgc
+# --
+#+ATTR_ORG: :width 250
+[file:images/${1:filename}][!$1|width=250!]

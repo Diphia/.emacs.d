@@ -35,6 +35,18 @@
                            (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
 
 (add-hook 'org-mode-hook 'visual-line-mode)
+(setq org-startup-with-inline-images t)
+(setq org-image-actual-width nil)
+
+(defun start-with-org-inline-images-universal ()
+  (let ((current-prefix-arg 4)) 
+    (call-interactively 'org-display-inline-images)))
+(add-hook 'org-mode-hook 'start-with-org-inline-images-universal)
+
+(defun org-toggle-inline-images-universal ()
+  (interactive)
+  (let ((current-prefix-arg 4)) ;; emulate C-u
+    (call-interactively 'org-toggle-inline-images)))
 
 (setq org-fontify-quote-and-verse-blocks t) ;; enable to define quote and verse block style
 
@@ -58,7 +70,7 @@
  '(org-date ((t (:underline t :foreground "firebrick"))))
  '(org-indent ((t (:inherit (org-hide fixed-pitch)))))
  '(org-link ((t (:foreground "royal blue" :underline t))))
- '(org-meta-line ((t (:inherit (font-lock-comment-face fixed-pitch)))))
+ '(org-meta-line ((t (:inherit (font-lock-comment-face fixed-pitch) :foreground "dim grey" :height 0.6))))
  '(org-property-value ((t (:inherit fixed-pitch))) t)
  '(org-special-keyword ((t (:inherit (font-lock-comment-face fixed-pitch))))) ;; :id:
  ;;'(org-table ((t (:inherit fixed-pitch :foreground "83a598"))))
@@ -79,6 +91,8 @@
                                        ("#+begin_quote" . "\"")
                                        ("#+end_quote" . "\"")
                                        ("#+TITLE:" . "")
+                                       ("#+ATTR_ORG:" . "")
+                                       ("{toc}" . "§")
                                        ("#+title:" . "")))
 ;;(setq prettify-symbols-unprettify-at-point 'right-edge)
 (add-hook 'org-mode-hook 'prettify-symbols-mode)
@@ -108,6 +122,8 @@
 (setq scroll-step            1
       scroll-conservatively  10000)
 (setq scroll-margin 10)
+
+
 
 (provide 'init-ui)
 ;;; init-ui.el ends here

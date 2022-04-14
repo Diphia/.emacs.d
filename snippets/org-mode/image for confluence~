@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: image for confluence
+# key: imgc
+# --
+[file:images/${1:filename}][!$1|width=250!]
