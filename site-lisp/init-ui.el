@@ -64,15 +64,15 @@
  '(org-block-begin-line ((t (:foreground "dim grey" :background "ghost white"))))
  '(org-quote ((t (:slant italic :foreground "dim gray" :background "ghost white"))))
  '(org-code ((t (:inherit (shadow fixed-pitch) :foreground "chocolate"))))
- '(org-drawer ((t (:foreground "dim grey"))))
+ '(org-drawer ((t (:foreground "dim grey" :height 0.6)))) ;; :PROPERTIES:
  '(org-document-info ((t (:foreground "dark orange"))))
  '(org-document-info-keyword ((t (:inherit (shadow fixed-pitch) :foreground "dim grey"))))
  '(org-date ((t (:underline t :foreground "firebrick"))))
  '(org-indent ((t (:inherit (org-hide fixed-pitch)))))
  '(org-link ((t (:foreground "royal blue" :underline t))))
  '(org-meta-line ((t (:inherit (font-lock-comment-face fixed-pitch) :foreground "dim grey" :height 0.6))))
- '(org-property-value ((t (:inherit fixed-pitch))) t)
- '(org-special-keyword ((t (:inherit (font-lock-comment-face fixed-pitch))))) ;; :id:
+ '(org-property-value ((t (:inherit fixed-pitch :height 0.6))) t)
+ '(org-special-keyword ((t (:inherit (font-lock-comment-face fixed-pitch) :height 0.6)))) ;; :id:
  ;;'(org-table ((t (:inherit fixed-pitch :foreground "83a598"))))
  '(org-table ((t (:inherit fixed-pitch :foreground "black"))))
  '(org-tag ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.5))))

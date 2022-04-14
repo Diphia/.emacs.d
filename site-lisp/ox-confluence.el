@@ -128,8 +128,6 @@
             (if (org-string-nw-p contents) contents ""))))
 
 (defun org-confluence-link (link desc info)
-  ;;(if (string= "radio" (org-element-property :type link))
-      ;;desc
   (if (string= "file" (org-element-property :type link))
       desc
     (let ((raw-link (org-element-property :raw-link link)))
