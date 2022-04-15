@@ -1,1 +1,1 @@
-("/Users/diphia/OneDrive/org-files/" "/Users/diphia/dotfiles/" "~/.emacs.d/" "/opt/homebrew/" "/Users/diphia/.emacs.d/")
+("/Users/diphia/Library/CloudStorage/OneDrive-Personal/org-files/" "~/.emacs.d/" "/Users/diphia/OneDrive/org-files/" "/Users/diphia/dotfiles/" "/Users/diphia/.emacs.d/")
