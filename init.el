@@ -11,8 +11,12 @@
 ;; (add-to-list 'load-path (expand-file-name "site-lisp/use-package" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/s.el" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/f.el" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "site-lisp/ht.el" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "site-lisp/hydra" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/dash.el" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "site-lisp/spinner.el" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/annalist.el" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "site-lisp/markdown-mode" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/magit/lisp" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/transient/lisp" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/with-editor/lisp" user-emacs-directory))
@@ -33,12 +37,14 @@
 (add-to-list 'load-path (expand-file-name "site-lisp/yasnippet" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/dockerfile-mode" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/yaml-mode" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "site-lisp/applescript-mode" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/lua-mode" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/json-snatcher" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/json-mode" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/company-mode" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/projectile" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/counsel-projectile" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "site-lisp/lsp-mode" user-emacs-directory))
 
 (defconst *spell-check-support-enabled* nil) ;; Enable with t if you prefer
 (defconst *is-a-mac* (eq system-type 'darwin))
@@ -92,6 +98,9 @@
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 
+(require 'applescript-mode)
+(add-to-list 'auto-mode-alist '("\\.scpt$" . applescript-mode))
+
 (require 'lua-mode)
 (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
 (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
@@ -109,6 +118,9 @@
 (projectile-mode)
 
 (require 'counsel-projectile)
+
+;;(require 'lsp)
+;;(add-hook 'python-mode-hook #'lsp)
 
 (provide 'init)
 ;;; init.el ends here
