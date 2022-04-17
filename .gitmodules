@@ -88,3 +88,21 @@
 [submodule "site-lisp/company-mode"]
 	path = site-lisp/company-mode
 	url = git@github.com:company-mode/company-mode.git
+[submodule "site-lisp/lsp-mode"]
+	path = site-lisp/lsp-mode
+	url = git@github.com:emacs-lsp/lsp-mode.git
+[submodule "site-lisp/ht.el"]
+	path = site-lisp/ht.el
+	url = git@github.com:Wilfred/ht.el.git
+[submodule "site-lisp/hydra"]
+	path = site-lisp/hydra
+	url = git@github.com:abo-abo/hydra.git
+[submodule "site-lisp/markdown-mode"]
+	path = site-lisp/markdown-mode
+	url = git@github.com:defunkt/markdown-mode.git
+[submodule "site-lisp/spinner.el"]
+	path = site-lisp/spinner.el
+	url = git@github.com:Malabarba/spinner.el.git
+[submodule "site-lisp/applescript-mode"]
+	path = site-lisp/applescript-mode
+	url = git@github.com:emacsorphanage/applescript-mode.git
