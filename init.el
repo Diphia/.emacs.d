@@ -39,11 +39,13 @@
 (add-to-list 'load-path (expand-file-name "site-lisp/yaml-mode" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/applescript-mode" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/lua-mode" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "site-lisp/racket-mode" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/json-snatcher" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/json-mode" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/company-mode" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/projectile" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/counsel-projectile" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "site-lisp/ledger-mode" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/lsp-mode" user-emacs-directory))
 
 (defconst *spell-check-support-enabled* nil) ;; Enable with t if you prefer
@@ -98,12 +100,16 @@
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 
-(require 'applescript-mode)
+
 (add-to-list 'auto-mode-alist '("\\.scpt$" . applescript-mode))
 
 (require 'lua-mode)
 (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
 (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
+
+(require 'racket-mode)
+(add-to-list 'auto-mode-alist '("\\.scm$" . racket-mode))
+(add-to-list 'interpreter-mode-alist '("scm" . racket-mode))
 
 (require 'json-mode)
 (add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
@@ -116,6 +122,8 @@
 
 (require 'projectile)
 (projectile-mode)
+
+(require 'ledger-mode)
 
 (require 'counsel-projectile)
 

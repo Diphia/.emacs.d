@@ -106,3 +106,9 @@
 [submodule "site-lisp/applescript-mode"]
 	path = site-lisp/applescript-mode
 	url = git@github.com:emacsorphanage/applescript-mode.git
+[submodule "site-lisp/racket-mode"]
+	path = site-lisp/racket-mode
+	url = git@github.com:greghendershott/racket-mode.git
+[submodule "site-lisp/ledger-mode"]
+	path = site-lisp/ledger-mode
+	url = https://github.com/ledger/ledger-mode.git
