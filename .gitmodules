@@ -112,3 +112,12 @@
 [submodule "site-lisp/ledger-mode"]
 	path = site-lisp/ledger-mode
 	url = https://github.com/ledger/ledger-mode.git
+[submodule "site-lisp/evil-org-mode"]
+	path = site-lisp/evil-org-mode
+	url = https://github.com/Somelauw/evil-org-mode.git
+[submodule "site-lisp/ox-hugo"]
+	path = site-lisp/ox-hugo
+	url = https://github.com/kaushalmodi/ox-hugo
+[submodule "site-lisp/tomelr"]
+	path = site-lisp/tomelr
+	url = https://github.com/kaushalmodi/tomelr.git

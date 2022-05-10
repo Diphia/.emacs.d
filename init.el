@@ -16,6 +16,7 @@
 (add-to-list 'load-path (expand-file-name "site-lisp/dash.el" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/spinner.el" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/annalist.el" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "site-lisp/tomelr" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/markdown-mode" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/magit/lisp" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/transient/lisp" user-emacs-directory))
@@ -25,6 +26,7 @@
 (add-to-list 'load-path (expand-file-name "site-lisp/evil-leader" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/evil-snipe" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/evil-collection" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "site-lisp/evil-org-mode" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/vimish-fold" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/evil-vimish-fold" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/linum-relative" user-emacs-directory))
@@ -34,6 +36,7 @@
 (add-to-list 'load-path (expand-file-name "site-lisp/valign" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/org-bullets" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/org-roam" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "site-lisp/ox-hugo" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/yasnippet" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/dockerfile-mode" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/yaml-mode" user-emacs-directory))
@@ -93,13 +96,14 @@
  '(org-agenda-files (list "/Users/diphia/org-files/agenda.org")))
 
 (require 'ox-confluence)
+(with-eval-after-load 'ox
+  (require 'ox-hugo))
 
 (require 'dockerfile-mode)
 (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
 
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
-
 
 (add-to-list 'auto-mode-alist '("\\.scpt$" . applescript-mode))
 
@@ -126,6 +130,12 @@
 (require 'ledger-mode)
 
 (require 'counsel-projectile)
+
+(require 'evil-org)
+(add-hook 'org-mode-hook 'evil-org-mode)
+(evil-org-set-key-theme '(navigation insert textobjects additional calendar))
+(require 'evil-org-agenda)
+(evil-org-agenda-set-keys)
 
 ;;(require 'lsp)
 ;;(add-hook 'python-mode-hook #'lsp)
