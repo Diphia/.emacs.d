@@ -49,6 +49,7 @@
 (add-to-list 'load-path (expand-file-name "site-lisp/projectile" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/counsel-projectile" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/ledger-mode" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "site-lisp/plantuml-mode" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/lsp-mode" user-emacs-directory))
 
 (defconst *spell-check-support-enabled* nil) ;; Enable with t if you prefer
@@ -136,6 +137,11 @@
 (evil-org-set-key-theme '(navigation insert textobjects additional calendar))
 (require 'evil-org-agenda)
 (evil-org-agenda-set-keys)
+
+(require 'plantuml-mode)
+(setq org-plantuml-jar-path (expand-file-name "/Applications/plantuml-1.2022.5.jar"))
+(add-to-list 'org-src-lang-modes '("plantuml" . plantuml))
+(org-babel-do-load-languages 'org-babel-load-languages '((plantuml . t)))
 
 ;;(require 'lsp)
 ;;(add-hook 'python-mode-hook #'lsp)
