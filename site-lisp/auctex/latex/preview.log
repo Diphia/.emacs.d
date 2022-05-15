@@ -1,0 +1,254 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.14)  15 MAY 2022 08:34
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**\nonstopmode \input{preview.drv}
+(./preview.drv (/usr/local/texlive/2022/texmf-dist/tex/latex/base/ltxdoc.cls
+Document Class: ltxdoc 2020/12/05 v2.1b Standard LaTeX documentation class
+*************************************
+* Local config file ltxdoc.cfg used
+*************************************
+(/usr/local/texlive/2022/texmf-dist/tex/latex-dev/base/ltxdoc.cfg
+File: ltxdoc.cfg 2021/12/07 v2.0c ltxdoc.cls configuration (LaTeX Project)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/doc.sty
+Package: doc 2021/10/04 v2.1n Standard LaTeX documentation package (FMi)
+\c@StandardModuleDepth=\count193
+\guard@level=\count194
+\MacrocodeTopsep=\skip49
+\MacroIndent=\dimen139
+\macro@cnt=\count195
+\MacroTopsep=\skip50
+\index@excludelist=\toks16
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
+\c@tracingmulticols=\count196
+\mult@box=\box50
+\multicol@leftmargin=\dimen140
+\c@unbalance=\count197
+\c@collectmore=\count198
+\doublecol@number=\count199
+\multicoltolerance=\count266
+\multicolpretolerance=\count267
+\full@width=\dimen141
+\page@free=\dimen142
+\premulticols=\dimen143
+\postmulticols=\dimen144
+\multicolsep=\skip51
+\multicolbaselineskip=\skip52
+\partial@page=\box51
+\last@line=\box52
+\maxbalancingoverflow=\dimen145
+\mult@rightbox=\box53
+\mult@grightbox=\box54
+\mult@firstbox=\box55
+\mult@gfirstbox=\box56
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\c@minrows=\count268
+\c@columnbadness=\count269
+\c@finalcolumnbadness=\count270
+\last@try=\dimen146
+\multicolovershoot=\dimen147
+\multicolundershoot=\dimen148
+\mult@nat@firstbox=\box93
+\colbreak@box=\box94
+\mc@col@check@num=\count271
+)
+\IndexMin=\dimen149
+\c@IndexColumns=\count272
+\GlossaryMin=\dimen150
+\c@GlossaryColumns=\count273
+\check@sum=\count274
+\bslash@cnt=\count275
+\wrong@table=\toks17
+\c@CodelineNo=\count276
+))
+(./preview.sty
+Package: preview 2017/04/24 13.1 (AUCTeX/preview-latex)
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/luatex85/luatex85.sty
+Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
+))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count277
+\l__pdf_internal_box=\box95
+)
+(./preview.aux)
+\openout1 = `preview.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+Package doc Info: Made | a short reference for \verb on input line 29.
+ (./preview.dtx
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <17.28> on input line 28.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 28.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 28.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 28.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 28.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 31.
+
+Overfull \hbox (2.944pt too wide) in paragraph at lines 42--51
+\OT1/cmr/m/n/10 good al-ter-na-tive: Peo-ple make do by fid-dling around with [
+]\OT1/cmtt/m/n/10 \thispagestyle{empty}
+ []
+
+[1
+
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 90.
+
+[2]
+Overfull \hbox (6.0296pt too wide) in paragraph at lines 152--154
+[][]\OT1/cmtt/m/n/10 latex '\RequirePackage[active,delayed,$\OMS/cmsy/m/n/10 h$
+[]\OT1/cmr/m/it/10 options$\OMS/cmsy/m/n/10 i$[][]\OT1/cmtt/m/n/10 ]{preview}
+ []
+
+[3] [4] [5] [6]
+
+LaTeX Warning: Marginpar on page 7 moved.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 451.
+[7] [8]
+Overfull \hbox (0.58882pt too wide) in paragraph at lines 527--527
+ [][]  \OT1/cmtt/m/sl/9 \long\def\pr@advise@ship#1#2#3{\pr@advise#1{\pr@protect
+@ship{#2}{#3}}}% 
+ []
+
+[9] [10] [11] [12]
+Overfull \hbox (0.58882pt too wide) in paragraph at lines 817--817
+ [][]    \OT1/cmtt/m/sl/9 \PackageError{preview}{Cannot find \protect\shipout\s
+pace primitive}% 
+ []
+
+[13] [14] [15] [16]
+Overfull \hbox (0.58882pt too wide) in paragraph at lines 1122--1122
+ [][]    \OT1/cmtt/m/sl/9 \noexpand\pr@advise@ship{##2}{\the\toks@{##1\noexpand
+\pr@endbox}}{}}% 
+ []
+
+[17] [18] [19]
+Overfull \hbox (5.31378pt too wide) in paragraph at lines 1336--1336
+ [][]      \OT1/cmtt/m/sl/9 % FIXME: The message should not be emitted if XeTeX
+ does not produce 
+ []
+
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 1347.
+
+[20] [21] [22] [23] [24] [25] [26] [27] [28]
+*******************
+* Checksum passed *
+*******************
+) [29] (./preview.aux) ) 
+Here is how much of TeX's memory you used:
+ 1035 strings out of 478268
+ 17425 string characters out of 5846347
+ 323379 words of memory out of 5000000
+ 19277 multiletter control sequences out of 15000+600000
+ 478435 words of font info for 61 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 60i,9n,65p,252b,503s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmbxti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmitt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmslt
+t10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss
+9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.p
+fb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><
+/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></
+usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></u
+sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></us
+r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/
+local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on preview.pdf (29 pages, 331037 bytes).
+PDF statistics:
+ 213 PDF objects out of 1000 (max. 8388607)
+ 134 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

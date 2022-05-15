@@ -27,6 +27,7 @@
 (add-to-list 'load-path (expand-file-name "site-lisp/evil-snipe" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/evil-collection" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/evil-org-mode" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "site-lisp/undo-tree.el" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/vimish-fold" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/evil-vimish-fold" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/linum-relative" user-emacs-directory))
@@ -50,6 +51,7 @@
 (add-to-list 'load-path (expand-file-name "site-lisp/counsel-projectile" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/ledger-mode" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/plantuml-mode" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "site-lisp/auctex" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/lsp-mode" user-emacs-directory))
 
 (defconst *spell-check-support-enabled* nil) ;; Enable with t if you prefer
@@ -138,10 +140,20 @@
 (require 'evil-org-agenda)
 (evil-org-agenda-set-keys)
 
+(require 'undo-tree)
+(define-key evil-normal-state-map "u" 'undo-tree-undo)
+(define-key evil-normal-state-map (kbd "C-r") 'undo-tree-redo)
+
 (require 'plantuml-mode)
 (setq org-plantuml-jar-path (expand-file-name "/Applications/plantuml-1.2022.5.jar"))
 (add-to-list 'org-src-lang-modes '("plantuml" . plantuml))
 (org-babel-do-load-languages 'org-babel-load-languages '((plantuml . t)))
+
+(setenv "PATH" (concat "/usr/texbin:/usr/local/bin:" (getenv "PATH")))
+(setq exec-path (append '("/usr/texbin" "/usr/local/bin") exec-path))
+(load "auctex.el" nil t t)
+(load "preview-latex.el" nil t t)
+(plist-put org-format-latex-options :scale 1.5)
 
 ;;(require 'lsp)
 ;;(add-hook 'python-mode-hook #'lsp)
