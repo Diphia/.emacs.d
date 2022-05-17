@@ -1,7 +1,8 @@
 /auto-save-list
-recentf
-recentf~
-smex-items
 /transient
-.org-id-locations
-.eld
+recentf*
+smex-items
+*.org-id-locations
+*.eld
+*.db
+bookmarks*
