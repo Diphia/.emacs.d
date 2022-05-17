@@ -64,6 +64,8 @@
   (add-hook 'emacs-startup-hook
             (lambda () (setq gc-cons-threshold normal-gc-cons-threshold))))
 
+(add-hook 'auto-save-hook 'org-save-all-org-buffers)
+
 ;; (setq byte-compile-warnings '(cl-functions))
 
 (require 'init-ui)
