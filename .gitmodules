@@ -127,3 +127,15 @@
 [submodule "site-lisp/undo-tree.el"]
 	path = site-lisp/undo-tree.el
 	url = https://github.com/apchamberlain/undo-tree.el.git
+[submodule "site-lisp/emacs-jupyter"]
+	path = site-lisp/emacs-jupyter
+	url = https://github.com/nnicandro/emacs-jupyter.git
+[submodule "site-lisp/emacs-web-server"]
+	path = site-lisp/emacs-web-server
+	url = https://github.com/skeeto/emacs-web-server.git
+[submodule "site-lisp/emacs-websocket"]
+	path = site-lisp/emacs-websocket
+	url = https://github.com/ahyatt/emacs-websocket.git
+[submodule "site-lisp/emacs-zmq"]
+	path = site-lisp/emacs-zmq
+	url = https://github.com/nnicandro/emacs-zmq.git

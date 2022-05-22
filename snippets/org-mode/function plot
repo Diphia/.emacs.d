@@ -1,0 +1,22 @@
+# -*- mode: snippet -*-
+# name: function plot
+# key: function
+# --
+
+#+begin_src python
+  import math
+  import numpy as np
+  import matplotlib.pyplot as plt
+
+  def func1(x):
+      return [k for k in x]
+
+  x = np.arange(0, 10, 0.1)
+  y = func(x)
+  plt.xlabel('x')
+  plt.ylabel('y')
+  plt.title('y=x')
+  plt.plot(x, y)
+  plt.show()
+  pass
+#+end_src
