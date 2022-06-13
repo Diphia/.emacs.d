@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: debit card
+# key: debit
+# --
+    Assets:Checking:招商银行储蓄卡  $1 CNY 
