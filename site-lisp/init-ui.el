@@ -103,7 +103,7 @@
 (add-hook 'org-mode-hook 'org-indent-mode)
 (setq org-list-indent-offset 2)
 
-(setq org-bullets-bullet-list '("◉" "○" "◇" "✿" "✸" ""))
+(setq org-bullets-bullet-list '("◉" "○" "✸" "◇" "✿" ""))
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
