@@ -6,3 +6,4 @@ smex-items
 *.eld
 *.db
 bookmarks*
+emacs-zmq
