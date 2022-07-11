@@ -1,9 +1,9 @@
 # key: newday
 # name: new day in journal
 # --
-** [`(format-time-string "%Y-%m-%d %a")`]
-*** Things in Plan
-**** TODO Accounting
-**** TODO Anki
-*** Things out of Plan
-*** Input
+* [`(format-time-string "%Y-%m-%d %a")`]
+** Things planned
+*** TODO Accounting
+*** TODO Anki
+** Things not planned
+** Input
