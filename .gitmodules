@@ -140,3 +140,6 @@
 	path = site-lisp/emacs-zmq
 	url = https://github.com/nnicandro/emacs-zmq.git
     ignore = dirty
+[submodule "site-lisp/emacs-presentation-mode"]
+	path = site-lisp/emacs-presentation-mode
+	url = git@github.com:zonuexe/emacs-presentation-mode.git

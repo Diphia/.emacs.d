@@ -57,6 +57,7 @@
 (add-to-list 'load-path (expand-file-name "site-lisp/plantuml-mode" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/auctex" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/lsp-mode" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "site-lisp/emacs-presentation-mode" user-emacs-directory))
 
 (defconst *spell-check-support-enabled* nil) ;; Enable with t if you prefer
 (defconst *is-a-mac* (eq system-type 'darwin))
@@ -164,6 +165,8 @@
 (load "preview-latex.el" nil t t)
 (plist-put org-format-latex-options :scale 1.5)
 (org-babel-do-load-languages 'org-babel-load-languages '((latex . t)))
+
+(require 'presentation)
 
 ;;(require 'lsp)
 ;;(add-hook 'python-mode-hook #'lsp)
