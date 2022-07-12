@@ -143,3 +143,6 @@
 [submodule "site-lisp/emacs-presentation-mode"]
 	path = site-lisp/emacs-presentation-mode
 	url = git@github.com:zonuexe/emacs-presentation-mode.git
+[submodule "site-lisp/awesome-tray"]
+	path = site-lisp/awesome-tray
+	url = https://github.com/manateelazycat/awesome-tray.git

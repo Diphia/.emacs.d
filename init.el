@@ -58,6 +58,7 @@
 (add-to-list 'load-path (expand-file-name "site-lisp/auctex" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/lsp-mode" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/emacs-presentation-mode" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "site-lisp/awesome-tray" user-emacs-directory))
 
 (defconst *spell-check-support-enabled* nil) ;; Enable with t if you prefer
 (defconst *is-a-mac* (eq system-type 'darwin))
@@ -167,6 +168,9 @@
 (org-babel-do-load-languages 'org-babel-load-languages '((latex . t)))
 
 (require 'presentation)
+
+(require 'awesome-tray)
+(awesome-tray-mode 1)
 
 ;;(require 'lsp)
 ;;(add-hook 'python-mode-hook #'lsp)
