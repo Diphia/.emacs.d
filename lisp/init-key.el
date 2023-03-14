@@ -60,6 +60,16 @@
   (interactive)
   (find-file "~/.emacs.d/init.el"))
 
+(defun open-journal()
+  "Quick open journal.org ."
+  (interactive)
+  (find-file (concat org-directory "roam/20220612104302-journal.org")))
+
+(defun open-snippet ()
+  "Quick open snippet.org ."
+  (interactive)
+  (find-file (concat org-directory "snippet.org")))
+
 (require 'evil-leader)
 (evil-leader/set-leader "<SPC>")
 (global-evil-leader-mode)
@@ -71,6 +81,8 @@
   "ff" 'find-file
   "fr" 'counsel-recentf
   "fp" 'open-init-config
+  "v" 'open-snippet
+  "j" 'open-journal
   "gg" 'magit-status
   "tp" 'open-temp-python
   "nrf" 'org-roam-node-find
