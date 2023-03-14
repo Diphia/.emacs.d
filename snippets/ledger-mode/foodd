@@ -1,0 +1,6 @@
+# key: foodd
+# name: foodd
+# --
+`(format-time-string "%Y-%m-%d")` * $1
+    Assets:Checking:Debit:CMBDebit  CNY 
+    Expense:Food
