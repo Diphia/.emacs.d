@@ -73,7 +73,7 @@
 (defun open-chat ()
   "Quick open chat list ."
   (interactive)
-  (find-file (concat org-directory "chat/")))
+  (find-file (concat org-directory "chat/temp.chat")))
 
 (defun switch-to-code-mode ()
   "Switch emacs to code mode"
@@ -88,8 +88,8 @@
   (interactive)
   (progn
     (set-face-foreground 'default "black")
-    (set-background-color "white"))
-    (setq frame-title-format '("Org Mode\n")))
+    (set-background-color "white")
+    (setq frame-title-format '("Org Mode\n"))))
 
 (defun copy-file-path-to-clipboard ()
   "Copy the current file path to the clipboard."
@@ -104,6 +104,7 @@
 (global-evil-leader-mode)
 (evil-leader/set-key
   "<SPC>" 'counsel-git
+  "<tab>" 'awesome-tab-counsel-switch-group
   "`" 'evil-switch-to-windows-last-buffer
   "bb" 'switch-to-buffer
   "bd" 'kill-current-buffer
@@ -132,6 +133,16 @@
 (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
 (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
 (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
+(define-key evil-normal-state-map (kbd "C-<tab>") 'awesome-tab-forward-tab)
+(define-key evil-normal-state-map (kbd "s-1") 'awesome-tab-select-beg-tab)
+(define-key evil-normal-state-map (kbd "s-9") 'awesome-tab-select-end-tab)
+(define-key evil-normal-state-map (kbd "s-2") 'awesome-tab-select-visible-tab)
+(define-key evil-normal-state-map (kbd "s-3") 'awesome-tab-select-visible-tab)
+(define-key evil-normal-state-map (kbd "s-4") 'awesome-tab-select-visible-tab)
+(define-key evil-normal-state-map (kbd "s-5") 'awesome-tab-select-visible-tab)
+(define-key evil-normal-state-map (kbd "s-6") 'awesome-tab-select-visible-tab)
+(define-key evil-normal-state-map (kbd "s-7") 'awesome-tab-select-visible-tab)
+(define-key evil-normal-state-map (kbd "s-8") 'awesome-tab-select-visible-tab)
 
 (require 'evil-collection)
 (evil-collection-init)
