@@ -7,3 +7,4 @@ smex-items
 *.db
 bookmarks*
 emacs-zmq
+url
