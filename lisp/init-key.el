@@ -75,6 +75,30 @@
   (interactive)
   (find-file (concat org-directory "chat/")))
 
+(defun switch-to-code-mode ()
+  "Switch emacs to code mode"
+  (interactive)
+  (progn
+    (set-face-foreground 'default "#a9b7c6")
+    (set-background-color "#2B2B2B"))
+    (setq frame-title-format '("GNU Emacs\n")))
+
+(defun switch-to-org-mode ()
+  "Switch emacs to org mode"
+  (interactive)
+  (progn
+    (set-face-foreground 'default "black")
+    (set-background-color "white"))
+    (setq frame-title-format '("Org Mode\n")))
+
+(defun copy-file-path-to-clipboard ()
+  "Copy the current file path to the clipboard."
+  (interactive)
+  (let ((file-path (buffer-file-name)))
+    (when file-path
+      (kill-new file-path)
+      (message "File path copied to clipboard: %s" file-path))))
+
 (require 'evil-leader)
 (evil-leader/set-leader "<SPC>")
 (global-evil-leader-mode)
@@ -101,6 +125,7 @@
   "sd" 'counsel-rg
   "sp" 'counsel-projectile-rg
   "x" 'switch-to-scratch
+  "y" 'copy-file-path-to-clipboard
   "?" 'counsel-describe-function)
 (setcdr evil-insert-state-map nil)
 (define-key evil-insert-state-map [escape] 'evil-normal-state)
