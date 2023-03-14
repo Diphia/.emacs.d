@@ -78,18 +78,16 @@
 (defun switch-to-code-mode ()
   "Switch emacs to code mode"
   (interactive)
-  (progn
-    (set-face-foreground 'default "#a9b7c6")
-    (set-background-color "#2B2B2B"))
-    (setq frame-title-format '("GNU Emacs\n")))
+  (set-face-foreground 'default "#a9b7c6")
+  (set-background-color "#2B2B2B")
+  (setq frame-title-format '("GNU Emacs\n")))
 
 (defun switch-to-org-mode ()
   "Switch emacs to org mode"
   (interactive)
-  (progn
-    (set-face-foreground 'default "black")
-    (set-background-color "white")
-    (setq frame-title-format '("Org Mode\n"))))
+  (set-face-foreground 'default "black")
+  (set-background-color "white")
+  (setq frame-title-format '("Org Mode\n")))
 
 (defun copy-file-path-to-clipboard ()
   "Copy the current file path to the clipboard."
@@ -136,13 +134,8 @@
 (define-key evil-normal-state-map (kbd "C-<tab>") 'awesome-tab-forward-tab)
 (define-key evil-normal-state-map (kbd "s-1") 'awesome-tab-select-beg-tab)
 (define-key evil-normal-state-map (kbd "s-9") 'awesome-tab-select-end-tab)
-(define-key evil-normal-state-map (kbd "s-2") 'awesome-tab-select-visible-tab)
-(define-key evil-normal-state-map (kbd "s-3") 'awesome-tab-select-visible-tab)
-(define-key evil-normal-state-map (kbd "s-4") 'awesome-tab-select-visible-tab)
-(define-key evil-normal-state-map (kbd "s-5") 'awesome-tab-select-visible-tab)
-(define-key evil-normal-state-map (kbd "s-6") 'awesome-tab-select-visible-tab)
-(define-key evil-normal-state-map (kbd "s-7") 'awesome-tab-select-visible-tab)
-(define-key evil-normal-state-map (kbd "s-8") 'awesome-tab-select-visible-tab)
+(dolist (i '(2 3 4 5 6 7 8))
+  (define-key evil-normal-state-map (kbd (format "s-%d" i)) 'awesome-tab-select-visible-tab))
 
 (require 'evil-collection)
 (evil-collection-init)
