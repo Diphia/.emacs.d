@@ -109,6 +109,9 @@
 (plist-put org-format-latex-options :scale 1.5)
 (org-babel-do-load-languages 'org-babel-load-languages '((latex . t)))
 
+(require 'awesome-tab)
+(awesome-tab-mode t)
+
 (require 'awesome-tray)
 (awesome-tray-mode 1)
 
