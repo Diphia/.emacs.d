@@ -2,5 +2,5 @@
 # name: zzb
 # --
 `(format-time-string "%Y-%m-%d")` * 朝朝宝 收益
-    Assets:Checking:招商银行储蓄卡 $1 CNY 
+    Assets:Checking:Debit:CMBDebit $1 CNY 
     Income:Market:Fixed

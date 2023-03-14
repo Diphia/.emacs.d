@@ -2,5 +2,5 @@
 # name: food
 # --
 `(format-time-string "%Y-%m-%d")` * $1
-    Liabilities:招商银行信用卡 CNY
-    Expense:生活:食品
+    Liabilities:CMBCredit  CNY
+    Expense:Food

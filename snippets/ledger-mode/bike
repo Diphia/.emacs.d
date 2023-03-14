@@ -3,5 +3,5 @@
 # key: bike
 # --
 `(format-time-string "%Y-%m-%d")` * 哈啰单车
-    Liabilities:招商银行信用卡 $1 CNY
-    Expense:交通:单车
+    Liabilities:CMBDebit $1 CNY
+    Expense:Transportation:Bike
