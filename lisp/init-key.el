@@ -70,6 +70,11 @@
   (interactive)
   (find-file (concat org-directory "snippet.org")))
 
+(defun open-chat ()
+  "Quick open chat list ."
+  (interactive)
+  (find-file (concat org-directory "chat/")))
+
 (require 'evil-leader)
 (evil-leader/set-leader "<SPC>")
 (global-evil-leader-mode)
@@ -83,6 +88,7 @@
   "fp" 'open-init-config
   "v" 'open-snippet
   "j" 'open-journal
+  "c" 'open-chat
   "gg" 'magit-status
   "tp" 'open-temp-python
   "nrf" 'org-roam-node-find
