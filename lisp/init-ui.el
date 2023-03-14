@@ -19,11 +19,14 @@
 ;;
 ;;; Code:
 
+(set-face-foreground 'default "#a9b7c6")
+(set-background-color "#2B2B2B")
 
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-(setq frame-title-format '("Org Mode\n"))
+(setq frame-title-format '("GNU Emacs\n"))
 (set-face-attribute 'default nil :font "Menlo" :height 180);;
+
 
 (add-hook 'prog-mode-hook 'linum-mode)
 (add-hook 'prog-mode-hook 'show-paren-mode)
