@@ -112,6 +112,8 @@
 (require 'awesome-tray)
 (awesome-tray-mode 1)
 
+(require 'mind-wave)
+
 ;;(require 'lsp)
 ;;(add-hook 'python-mode-hook #'lsp)
 
