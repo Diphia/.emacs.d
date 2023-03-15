@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: daily
+# key: daily
+# --
+
+* [`(format-time-string "%Y-%m-%d %a")`]
+** Things
+*** TODO Accounting
+*** TODO Anki
+*** TODO Leetcode
+*** TODO Speaking Diary 
+- [[/Users/diphia/Documents/Recordings/sd`(format-time-string "%Y%m%d")`.m4a][SD `(format-time-string "%Y/%m/%d")`]]
+*** TODO Read Hacker News Top10
+  
+** Input  
