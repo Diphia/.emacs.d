@@ -110,6 +110,13 @@
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
+(setq org-todo-keywords
+      '((sequence "TODO" "IN-PROGRESS" "|" "DONE" "CANCELLED" "OVERDUE")))
+
+(setq org-todo-keyword-faces
+      '(("OVERDUE" . (:foreground "red" :weight bold))
+	("CANCELLED" . (:foreground "red" :weight bold))))
+
 (setq valign-fancy-bar t)
 (require 'valign)
 (add-hook 'org-mode-hook #'valign-mode)
