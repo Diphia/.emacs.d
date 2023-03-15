@@ -132,6 +132,7 @@
 (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
 (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
 (define-key evil-normal-state-map (kbd "C-<tab>") 'awesome-tab-forward-tab)
+(define-key evil-normal-state-map (kbd "C-<S-tab>") 'awesome-tab-backward-tab)
 (define-key evil-normal-state-map (kbd "s-1") 'awesome-tab-select-beg-tab)
 (define-key evil-normal-state-map (kbd "s-9") 'awesome-tab-select-end-tab)
 (dolist (i '(2 3 4 5 6 7 8))
