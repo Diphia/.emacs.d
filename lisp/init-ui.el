@@ -136,7 +136,8 @@
 (setq awesome-tray-active-modules '("location" "belong" "file-path" "git"))
 (setq awesome-tray-file-path-show-filename 1)
 
-
+(setq awesome-tab-buffer-groups-function
+      (lambda () (list "default")))
 
 
 (provide 'init-ui)
