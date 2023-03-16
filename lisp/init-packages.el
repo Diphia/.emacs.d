@@ -117,6 +117,8 @@
 
 (require 'mind-wave)
 
+(require 'presentation)
+
 ;;(require 'lsp)
 ;;(add-hook 'python-mode-hook #'lsp)
 
