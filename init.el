@@ -30,7 +30,7 @@
           (add-to-list 'load-path subdir-path t))
         (add-subdirs-to-load-path subdir-path)))))
 
-(add-subdirs-to-load-path "/Users/diphia/pure_emacs/.emacs.d/site-lisp")
+(add-subdirs-to-load-path "~/.emacs.d/site-lisp")
 (add-to-list 'load-path (expand-file-name "site-lisp" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
