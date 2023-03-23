@@ -96,6 +96,16 @@
     (when file-path
       (kill-new file-path)
       (message "File path copied to clipboard: %s" file-path))))
+      
+(defun dired-copy-file-path-to-clipboard ()
+  "Copy the full file path of the file under the cursor in Dired mode to the clipboard."
+  (interactive)
+  (let ((file-path (dired-get-file-for-visit)))
+    (when file-path
+      (with-temp-buffer
+        (insert file-path)
+        (clipboard-kill-ring-save (point-min) (point-max)))
+      (message "Copied file path to clipboard: %s" file-path))))
 
 (require 'evil-leader)
 (evil-leader/set-leader "<SPC>")
@@ -137,9 +147,12 @@
 (define-key evil-normal-state-map (kbd "s-9") 'awesome-tab-select-end-tab)
 (dolist (i '(2 3 4 5 6 7 8))
   (define-key evil-normal-state-map (kbd (format "s-%d" i)) 'awesome-tab-select-visible-tab))
+(define-key evil-normal-state-map (kbd "s-y") 'dired-copy-file-path-to-clipboard)
+
 
 (require 'evil-collection)
 (evil-collection-init)
+
 
 (setq org-return-follows-link t)
 
