@@ -27,6 +27,8 @@
 (setq frame-title-format '("GNU Emacs\n"))
 (set-face-attribute 'default nil :font "Menlo" :height 180);;
 
+(setq dired-dwim-target t)
+(add-hook 'dired-mode-hook 'auto-revert-mode)
 
 (add-hook 'prog-mode-hook 'linum-mode)
 (add-hook 'prog-mode-hook 'show-paren-mode)
