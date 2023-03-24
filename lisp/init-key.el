@@ -73,7 +73,7 @@
 (defun open-chat ()
   "Quick open chat list ."
   (interactive)
-  (find-file (concat org-directory "chat/temp.chat")))
+  (find-file "/tmp/main.chat.org"))
 
 (defun switch-to-code-mode ()
   "Switch emacs to code mode"
