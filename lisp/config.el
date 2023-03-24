@@ -31,5 +31,12 @@
 
 (add-hook 'auto-save-hook 'org-save-all-org-buffers)
 
+(defun my-disable-projectile-for-tramp (&optional _)
+  "Disable projectile mode for remote (tramp) buffers."
+  (when (file-remote-p default-directory)
+    (projectile-mode -1)))
+
+(add-hook 'find-file-hook #'my-disable-projectile-for-tramp)
+
 (provide 'config)
 ;;; config.el ends here
