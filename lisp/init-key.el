@@ -45,35 +45,15 @@
   (lambda ()
    (local-set-key [s-return] 'org-insert-item)))
 
-(defun open-temp-python ()
-  "Quick open a temp python file."
-  (interactive)
-  (find-file "/tmp/test.py"))
-
 (defun switch-to-scratch()
   "Quick open a scratch buffer."
   (interactive)
   (switch-to-buffer "*scratch*"))
 
-(defun open-init-config ()
-  "Quick open init.el ."
-  (interactive)
-  (find-file "~/.emacs.d/init.el"))
-
-(defun open-journal()
-  "Quick open journal.org ."
-  (interactive)
-  (find-file (concat org-directory "roam/20220612104302-journal.org")))
-
-(defun open-snippet ()
-  "Quick open snippet.org ."
-  (interactive)
-  (find-file (concat org-directory "snippet.org")))
-
-(defun open-chat ()
-  "Quick open chat list ."
-  (interactive)
-  (find-file "/tmp/main.chat.org"))
+(defun quick-open (path)
+  "Quick open path"
+  (interactive (list (read-directory-name "Path: ")))
+  (find-file path))
 
 (defun switch-to-code-mode ()
   "Switch emacs to code mode"
@@ -113,17 +93,24 @@
 (evil-leader/set-key
   "<SPC>" 'counsel-git
   "<tab>" 'awesome-tab-counsel-switch-group
+  "d1" (lambda () (interactive) (quick-open "~"))
+  "dv" (lambda () (interactive) (quick-open "/Volumes"))
+  "dt" (lambda () (interactive) (quick-open "~/temp/"))
+  "do" (lambda () (interactive) (quick-open "~/Documents"))
+  "de" (lambda () (interactive) (quick-open "~/Desktop"))
+  "dd" (lambda () (interactive) (quick-open "~/Downloads"))
+  "tt" 'toggle-truncate-lines
   "`" 'evil-switch-to-windows-last-buffer
   "bb" 'switch-to-buffer
   "bd" 'kill-current-buffer
   "ff" 'find-file
   "fr" 'counsel-recentf
-  "fp" 'open-init-config
-  "v" 'open-snippet
-  "j" 'open-journal
-  "c" 'open-chat
+  "fp" (lambda () (interactive) (quick-open "~/.emacs.d/init.el"))
+  "v" (lambda () (interactive) (quick-open (concat org-directory "snippet.org")))
+  "j" (lambda () (interactive) (quick-open (concat org-directory "roam/20220612104302-journal.org")))
+  "c" (lambda () (interactive) (quick-open "/tmp/main.chat.org"))
   "gg" 'magit-status
-  "tp" 'open-temp-python
+  "tp" 'open-femp-python
   "nrf" 'org-roam-node-find
   "nrr" 'org-roam-buffer-toggle
   "mdt" 'org-time-stamp
