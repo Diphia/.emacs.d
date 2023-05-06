@@ -41,8 +41,8 @@
 (setq org-directory "/Users/diphia/org-files/")
 (setq org-roam-directory "/Users/diphia/org-files/roam")
 (require 'jupyter)
-(org-babel-do-load-languages 'org-babel-load-languages '((jupyter . t)))
-(org-babel-jupyter-override-src-block "python")
+;;(org-babel-do-load-languages 'org-babel-load-languages '((jupyter . t)))
+;;(org-babel-jupyter-override-src-block "python")
 
 (require 'yasnippet)
 (setq yas-snippet-dirs '("~/.emacs.d/snippets"))
@@ -77,8 +77,8 @@
 (setq python-shell-interpreter "python3")
 (setq python-indent 4)
 
-(require 'company)
-(add-hook 'after-init-hook 'global-company-mode)
+;;(require 'company)
+;;(add-hook 'after-init-hook 'global-company-mode)
 
 (require 'projectile)
 (projectile-mode)
@@ -118,6 +118,13 @@
 (require 'mind-wave)
 
 (require 'presentation)
+
+(require 'posframe)
+
+;;(require 'lsp-pyright)
+
+(require 'lsp-bridge)
+(global-lsp-bridge-mode)
 
 ;;(require 'lsp)
 ;;(add-hook 'python-mode-hook #'lsp)

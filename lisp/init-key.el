@@ -136,6 +136,7 @@
   (define-key evil-normal-state-map (kbd (format "s-%d" i)) 'awesome-tab-select-visible-tab))
 (define-key evil-normal-state-map (kbd "s-y") 'dired-copy-file-path-to-clipboard)
 
+(define-key evil-normal-state-map (kbd "g d") 'lsp-bridge-find-def)
 
 (require 'evil-collection)
 (evil-collection-init)
