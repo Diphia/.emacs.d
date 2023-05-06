@@ -25,7 +25,7 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (setq frame-title-format '("GNU Emacs\n"))
-(set-face-attribute 'default nil :font "Menlo" :height 180);;
+(set-face-attribute 'default nil :font "Monaco" :height 180);;
 
 (setq dired-dwim-target t)
 (add-hook 'dired-mode-hook 'auto-revert-mode)
@@ -83,7 +83,7 @@
  '(org-tag ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.5))))
  '(org-verbatim ((t (:inherit (shadow fixed-pitch)))))
  '(variable-pitch ((t (:family "CMU Concrete" :height 200 :weight normal))))
- '(fixed-pitch ((t ( :family "Menlo" :height 180)))))
+ '(fixed-pitch ((t ( :family "Monaco" :height 180)))))
 
 (set-fontset-font t 'unicode (font-spec :family "Apple Color Emoji" :height 200))
 (set-fontset-font t '(#x2ff0 . #x9ffc) (font-spec :family "Sarasa Mono Slab SC" :height 200 :weight 'normal))
@@ -138,9 +138,8 @@
 (setq awesome-tray-active-modules '("location" "belong" "file-path" "git"))
 (setq awesome-tray-file-path-show-filename 1)
 
-(setq awesome-tab-buffer-groups-function
-      (lambda () (list "default")))
-
+;;(setq awesome-tab-buffer-groups-function
+      ;;(lambda () (list "default")))
 
 (provide 'init-ui)
 ;;; init-ui.el ends here
