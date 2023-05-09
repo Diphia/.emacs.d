@@ -87,6 +87,19 @@
         (clipboard-kill-ring-save (point-min) (point-max)))
       (message "Copied file path to clipboard: %s" file-path))))
 
+(defun open-all-links-in-org-mode ()
+  "Open all links in the current org-mode buffer."
+  (interactive)
+  (require 'org)
+  (unless (eq major-mode 'org-mode)
+    (error "This function works only in org-mode buffers"))
+  (save-excursion
+    (goto-char (point-min))
+    (while (re-search-forward org-link-any-re nil t)
+      (let ((link (org-element-context)))
+        (when (eq (org-element-type link) 'link)
+          (org-open-at-point-global))))))
+
 (require 'evil-leader)
 (evil-leader/set-leader "<SPC>")
 (global-evil-leader-mode)
