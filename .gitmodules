@@ -158,3 +158,12 @@
 [submodule "site-lisp/lsp-pyright"]
 	path = site-lisp/lsp-pyright
 	url = https://github.com/emacs-lsp/lsp-pyright.git
+[submodule "site-lisp/fd-dired"]
+	path = site-lisp/fd-dired
+	url = https://github.com/yqrashawn/fd-dired.git
+[submodule "site-lisp/rg.el"]
+	path = site-lisp/rg.el
+	url = https://github.com/dajva/rg.el.git
+[submodule "site-lisp/Emacs-wgrep"]
+	path = site-lisp/Emacs-wgrep
+	url = https://github.com/mhayashi1120/Emacs-wgrep.git
