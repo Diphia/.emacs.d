@@ -44,6 +44,9 @@
 ;;(org-babel-do-load-languages 'org-babel-load-languages '((jupyter . t)))
 ;;(org-babel-jupyter-override-src-block "python")
 
+(require 'fd-dired)
+(require 'rg)
+
 (require 'yasnippet)
 (setq yas-snippet-dirs '("~/.emacs.d/snippets"))
 (yas-global-mode 1)

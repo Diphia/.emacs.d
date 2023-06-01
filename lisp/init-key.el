@@ -115,6 +115,7 @@
   "tt" 'toggle-truncate-lines
   "`" 'evil-switch-to-windows-last-buffer
   "bb" 'switch-to-buffer
+  "bp" 'previous-buffer
   "bd" 'kill-current-buffer
   "ff" 'find-file
   "fr" 'counsel-recentf
