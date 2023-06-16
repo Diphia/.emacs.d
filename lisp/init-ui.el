@@ -30,7 +30,7 @@
 (setq dired-dwim-target t)
 (add-hook 'dired-mode-hook 'auto-revert-mode)
 
-(setq dired-listing-switches "-alh")
+(setq dired-listing-switches "-alhS")
 
 (add-hook 'prog-mode-hook 'linum-mode)
 (add-hook 'prog-mode-hook 'show-paren-mode)
