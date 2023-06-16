@@ -106,6 +106,7 @@
   "ff" 'find-file
   "fr" 'counsel-recentf
   "fp" (lambda () (interactive) (quick-open "~/.emacs.d/init.el"))
+  "fs" (lambda () (interactive) (quick-open "~/.ssh/config"))
   "v" (lambda () (interactive) (quick-open (concat org-directory "snippet.org")))
   "j" (lambda () (interactive) (quick-open (concat org-directory "roam/20220612104302-journal.org")))
   "c" (lambda () (interactive) (quick-open "/tmp/main.chat.org"))
