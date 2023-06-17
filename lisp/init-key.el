@@ -72,10 +72,13 @@
 (defun copy-file-path-to-clipboard ()
   "Copy the current file path to the clipboard."
   (interactive)
-  (let ((file-path (buffer-file-name)))
+  (let ((file-path (if (eq major-mode 'dired-mode)
+                       (dired-current-directory)
+                     (buffer-file-name))))
     (when file-path
       (kill-new file-path)
       (message "File path copied to clipboard: %s" file-path))))
+
       
 (defun dired-copy-file-path-to-clipboard ()
   "Copy the full file path of the file under the cursor in Dired mode to the clipboard."
@@ -98,7 +101,25 @@
     (while (re-search-forward org-link-any-re nil t)
       (let ((link (org-element-context)))
         (when (eq (org-element-type link) 'link)
-          (org-open-at-point-global))))))
+          (org-open-at-point-global)
+	  (sleep-for 0.5))))))
+
+(defun run-ripgrep-in-buffer (search-term)
+  "Run ripgrep on the current buffer's file with SEARCH-TERM."
+  (interactive "sEnter search term: ")
+  (let* ((filename (buffer-file-name))
+         (command (format "rg --with-filename --no-heading --line-number %s %s"
+                          search-term
+                          filename))
+         (output-buffer (get-buffer-create "*ripgrep-output*")))
+    (shell-command command output-buffer)
+    (pop-to-buffer output-buffer)))
+
+(defun my-dired-open-selection ()
+  "Open the currently selected files in Dired using the 'open' command."
+  (interactive)
+  (let ((files (dired-get-marked-files)))
+    (dired-do-shell-command "open *" nil files)))
 
 (require 'evil-leader)
 (evil-leader/set-leader "<SPC>")
@@ -130,7 +151,7 @@
   "nrr" 'org-roam-buffer-toggle
   "mdt" 'org-time-stamp
   "mdT" 'org-time-stamp-inactive
-  "oaa" 'org-agenda-list
+  "o" 'my-dired-open-selection
   "pp" 'projectile-switch-project
   "sb" 'swiper
   "sd" 'counsel-rg
