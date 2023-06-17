@@ -78,7 +78,6 @@
     (when file-path
       (kill-new file-path)
       (message "File path copied to clipboard: %s" file-path))))
-
       
 (defun dired-copy-file-path-to-clipboard ()
   "Copy the full file path of the file under the cursor in Dired mode to the clipboard."
@@ -153,6 +152,7 @@
   "mdT" 'org-time-stamp-inactive
   "o" 'my-dired-open-selection
   "pp" 'projectile-switch-project
+  "q" 'toggle-j-k-keys-for-peep
   "sb" 'swiper
   "sd" 'counsel-rg
   "sp" 'counsel-projectile-rg
@@ -177,6 +177,17 @@
 (require 'evil-collection)
 (evil-collection-init)
 
+(defun toggle-j-k-keys-for-peep ()
+  "Toggle the behavior of 'j' and 'k' keys."
+  (interactive)
+  (if (eq (lookup-key evil-normal-state-local-map (kbd "j")) 'peep-dired-next-file)
+      (progn
+        (define-key evil-normal-state-local-map (kbd "j") 'evil-next-visual-line)
+        (define-key evil-normal-state-local-map (kbd "k") 'evil-previous-visual-line)
+	(peep-dired-kill-buffers-without-window))
+    (progn
+      (define-key evil-normal-state-local-map (kbd "j") 'peep-dired-next-file)
+      (define-key evil-normal-state-local-map (kbd "k") 'peep-dired-prev-file))))
 
 (setq org-return-follows-link t)
 

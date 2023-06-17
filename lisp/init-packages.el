@@ -45,6 +45,7 @@
 ;;(org-babel-jupyter-override-src-block "python")
 
 (require 'fd-dired)
+(require 'peep-dired)
 (require 'rg)
 
 (require 'yasnippet)

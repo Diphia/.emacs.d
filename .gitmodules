@@ -167,3 +167,6 @@
 [submodule "site-lisp/Emacs-wgrep"]
 	path = site-lisp/Emacs-wgrep
 	url = https://github.com/mhayashi1120/Emacs-wgrep.git
+[submodule "site-lisp/peep-dired"]
+	path = site-lisp/peep-dired
+	url = https://github.com/asok/peep-dired.git
