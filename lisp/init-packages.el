@@ -46,6 +46,10 @@
 
 (require 'fd-dired)
 (require 'peep-dired)
+(require 'dired-async)
+(dired-async-mode 1)
+(require 'dired-subtree)
+
 (require 'rg)
 
 (require 'yasnippet)

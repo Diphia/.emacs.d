@@ -27,10 +27,12 @@
 (setq frame-title-format '("GNU Emacs\n"))
 (set-face-attribute 'default nil :font "Monaco" :height 180);;
 
+(add-hook 'dired-mode-hook (lambda () (dired-hide-details-mode 1)))
 (setq dired-dwim-target t)
 (add-hook 'dired-mode-hook 'auto-revert-mode)
 
-(setq dired-listing-switches "-alhS")
+(setq insert-directory-program "/opt/homebrew/bin/gls" dired-use-ls-dired t)
+(setq dired-listing-switches "-alh --group-directories-first")
 
 (add-hook 'prog-mode-hook 'linum-mode)
 (add-hook 'prog-mode-hook 'show-paren-mode)

@@ -103,22 +103,45 @@
           (org-open-at-point-global)
 	  (sleep-for 0.5))))))
 
-(defun run-ripgrep-in-buffer (search-term)
-  "Run ripgrep on the current buffer's file with SEARCH-TERM."
-  (interactive "sEnter search term: ")
-  (let* ((filename (buffer-file-name))
-         (command (format "rg --with-filename --no-heading --line-number %s %s"
-                          search-term
-                          filename))
-         (output-buffer (get-buffer-create "*ripgrep-output*")))
-    (shell-command command output-buffer)
-    (pop-to-buffer output-buffer)))
-
 (defun my-dired-open-selection ()
   "Open the currently selected files in Dired using the 'open' command."
   (interactive)
   (let ((files (dired-get-marked-files)))
     (dired-do-shell-command "open *" nil files)))
+
+(defvar my-dired-sort-options
+  '((?s . ("Sort by size" . "-S"))
+    (?m . ("Sort by last modified time" . "-t"))
+    (?n . ("Sort by file name" . ""))
+    (?e . ("Sort by file extension" . "-X")))
+  "Association list of sorting options for `my-dired-sort'.")
+
+(defun my-dired-sort (key)
+  "Sort Dired buffer in different ways based on a provided KEY."
+  (interactive "cEnter sort key: ")
+  (let ((option (assoc key my-dired-sort-options)))
+    (if option
+        (progn
+          (message (car (cdr option)))
+          (dired-sort-other (concat dired-listing-switches " " (cdr (cdr option)))))
+      (message "Invalid key %c" key))))
+
+(defvar my-dired-jump-key-folder-alist
+  '((?1 . "~")
+    (?v . "/Volumes")
+    (?t . "~/temp")
+    (?o . "~/Documents")
+    (?e . "~/Desktop")
+    (?d . "~/Downloads"))
+  "Alist of key-folder pairs for 'my-dired-jump'.")
+
+(defun my-dired-jump (key)
+  "Jump Dired buffer in different ways based on a provided KEY."
+  (interactive "cEnter jump key: ")
+  (let ((folder (cdr (assoc key my-dired-jump-key-folder-alist))))
+    (if folder
+	(quick-open folder)
+      (message "Invalid key %c" key))))
 
 (require 'evil-leader)
 (evil-leader/set-leader "<SPC>")
@@ -126,12 +149,7 @@
 (evil-leader/set-key
   "<SPC>" 'counsel-git
   "<tab>" 'awesome-tab-counsel-switch-group
-  "d1" (lambda () (interactive) (quick-open "~"))
-  "dv" (lambda () (interactive) (quick-open "/Volumes"))
-  "dt" (lambda () (interactive) (quick-open "~/temp/"))
-  "do" (lambda () (interactive) (quick-open "~/Documents"))
-  "de" (lambda () (interactive) (quick-open "~/Desktop"))
-  "dd" (lambda () (interactive) (quick-open "~/Downloads"))
+  "d" 'my-dired-jump
   "tt" 'toggle-truncate-lines
   "`" 'evil-switch-to-windows-last-buffer
   "bb" 'switch-to-buffer
@@ -150,15 +168,16 @@
   "nrr" 'org-roam-buffer-toggle
   "mdt" 'org-time-stamp
   "mdT" 'org-time-stamp-inactive
-  "o" 'my-dired-open-selection
   "pp" 'projectile-switch-project
-  "q" 'toggle-j-k-keys-for-peep
   "sb" 'swiper
   "sd" 'counsel-rg
   "sp" 'counsel-projectile-rg
   "x" 'switch-to-scratch
   "y" 'copy-file-path-to-clipboard
-  "?" 'counsel-describe-function)
+  "?" 'counsel-describe-function
+  "[" (lambda () (interactive) (shrink-window-horizontally 40))
+  "]" (lambda () (interactive) (enlarge-window-horizontally 40)))
+
 (setcdr evil-insert-state-map nil)
 (define-key evil-insert-state-map [escape] 'evil-normal-state)
 (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
@@ -170,12 +189,21 @@
 (define-key evil-normal-state-map (kbd "s-9") 'awesome-tab-select-end-tab)
 (dolist (i '(2 3 4 5 6 7 8))
   (define-key evil-normal-state-map (kbd (format "s-%d" i)) 'awesome-tab-select-visible-tab))
-(define-key evil-normal-state-map (kbd "s-y") 'dired-copy-file-path-to-clipboard)
 
 (define-key evil-normal-state-map (kbd "g d") 'lsp-bridge-find-def)
 
 (require 'evil-collection)
 (evil-collection-init)
+
+(with-eval-after-load 'evil-collection
+  (with-eval-after-load 'dired
+    (evil-define-key 'normal dired-mode-map (kbd "q") 'toggle-j-k-keys-for-peep)
+    (evil-define-key 'normal dired-mode-map (kbd "Y") 'dired-copy-file-path-to-clipboard)
+    (evil-define-key 'normal dired-mode-map (kbd "o") 'my-dired-open-selection)
+    (evil-define-key 'normal dired-mode-map (kbd "s") 'my-dired-sort)
+    (evil-define-key 'normal dired-mode-map (kbd "d") 'my-dired-jump)
+    (evil-define-key 'normal dired-mode-map (kbd "<tab>") 'dired-subtree-toggle)
+    ))
 
 (defun toggle-j-k-keys-for-peep ()
   "Toggle the behavior of 'j' and 'k' keys."
@@ -184,10 +212,13 @@
       (progn
         (define-key evil-normal-state-local-map (kbd "j") 'evil-next-visual-line)
         (define-key evil-normal-state-local-map (kbd "k") 'evil-previous-visual-line)
+	(delete-other-windows)
 	(peep-dired-kill-buffers-without-window))
     (progn
+      (peep-dired)
       (define-key evil-normal-state-local-map (kbd "j") 'peep-dired-next-file)
-      (define-key evil-normal-state-local-map (kbd "k") 'peep-dired-prev-file))))
+      (define-key evil-normal-state-local-map (kbd "k") 'peep-dired-prev-file)
+      )))
 
 (setq org-return-follows-link t)
 
