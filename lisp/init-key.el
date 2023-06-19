@@ -170,8 +170,8 @@
   "mdT" 'org-time-stamp-inactive
   "pp" 'projectile-switch-project
   "sb" 'swiper
-  "sd" 'counsel-rg
-  "sp" 'counsel-projectile-rg
+  "sd" 'color-rg-search-input
+  "sp" 'color-rg-search-input-in-project
   "x" 'switch-to-scratch
   "y" 'copy-file-path-to-clipboard
   "?" 'counsel-describe-function

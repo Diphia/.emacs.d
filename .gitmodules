@@ -176,3 +176,9 @@
 [submodule "site-lisp/dired-hacks"]
 	path = site-lisp/dired-hacks
 	url = https://github.com/Fuco1/dired-hacks.git
+[submodule "site-lisp/color-rg"]
+	path = site-lisp/color-rg
+	url = https://github.com/manateelazycat/color-rg.git
+[submodule "site-lisp/exec-path-from-shell"]
+	path = site-lisp/exec-path-from-shell
+	url = https://github.com/purcell/exec-path-from-shell.git
