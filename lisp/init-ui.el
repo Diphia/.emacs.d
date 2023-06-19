@@ -22,6 +22,8 @@
 (set-face-foreground 'default "#a9b7c6")
 (set-background-color "#2B2B2B")
 
+(setq split-width-threshold 120)
+
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (setq frame-title-format '("GNU Emacs\n"))
@@ -31,7 +33,7 @@
 (setq dired-dwim-target t)
 (add-hook 'dired-mode-hook 'auto-revert-mode)
 
-(setq insert-directory-program "/opt/homebrew/bin/gls" dired-use-ls-dired t)
+(setq insert-directory-program "/usr/local/bin/gls" dired-use-ls-dired t)
 (setq dired-listing-switches "-alh --group-directories-first")
 
 (add-hook 'prog-mode-hook 'linum-mode)
