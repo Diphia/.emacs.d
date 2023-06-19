@@ -143,6 +143,15 @@
 	(quick-open folder)
       (message "Invalid key %c" key))))
 
+(defun open-color-rg-buffer ()
+  "Open *color-rg* buffer in side window."
+  (interactive)
+  (let ((buffer (get-buffer "*color-rg*")))
+    (if buffer
+        (let ((window (display-buffer-in-side-window buffer '((side . right) (window-width . 0.5)))))
+          (select-window window))
+      (message "*color-rg* buffer does not exist."))))
+
 (require 'evil-leader)
 (evil-leader/set-leader "<SPC>")
 (global-evil-leader-mode)
@@ -169,9 +178,11 @@
   "mdt" 'org-time-stamp
   "mdT" 'org-time-stamp-inactive
   "pp" 'projectile-switch-project
+  "q" 'open-color-rg-buffer
   "sb" 'swiper
   "sd" 'color-rg-search-input
   "sp" 'color-rg-search-input-in-project
+  "ss" 'color-rg-search-symbol-in-project
   "x" 'switch-to-scratch
   "y" 'copy-file-path-to-clipboard
   "?" 'counsel-describe-function
