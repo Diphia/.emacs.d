@@ -40,12 +40,11 @@
 (require 'org-roam)
 (setq org-directory "/Users/diphia/org-files/")
 (setq org-roam-directory "/Users/diphia/org-files/roam")
-(require 'jupyter)
-;;(org-babel-do-load-languages 'org-babel-load-languages '((jupyter . t)))
-;;(org-babel-jupyter-override-src-block "python")
 
 (require 'fd-dired)
 (require 'peep-dired)
+(setq peep-dired-ignored-extensions '("elc" "mkv" "webm" "mp4" "mp3" "ogg" "iso" "mat" "exe" "dmg" "pcap"))
+
 (require 'dired-async)
 (dired-async-mode 1)
 (require 'dired-subtree)
@@ -67,7 +66,7 @@
 (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
 
 (require 'yaml-mode)
-(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.ya?ml\\'" . yaml-mode))
 
 (add-to-list 'auto-mode-alist '("\\.scpt$" . applescript-mode))
 
@@ -84,9 +83,6 @@
 
 (setq python-shell-interpreter "python3")
 (setq python-indent 4)
-
-;;(require 'company)
-;;(add-hook 'after-init-hook 'global-company-mode)
 
 (require 'projectile)
 (projectile-mode)
@@ -129,13 +125,8 @@
 
 (require 'posframe)
 
-;;(require 'lsp-pyright)
-
 (require 'lsp-bridge)
 (global-lsp-bridge-mode)
-
-;;(require 'lsp)
-;;(add-hook 'python-mode-hook #'lsp)
 
 (provide 'init-packages)
 ;;; init-packages.el ends here

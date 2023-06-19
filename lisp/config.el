@@ -39,7 +39,8 @@
 (add-hook 'find-file-hook #'my-disable-projectile-for-tramp)
 
 (org-babel-do-load-languages
- 'org-babel-load-languages '((python . t)))
+ 'org-babel-load-languages '((python . t)
+			     (emacs-lisp . t)))
 
 (setq make-backup-files nil)
 

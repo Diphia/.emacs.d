@@ -63,7 +63,6 @@
 
 (custom-theme-set-faces
  'user
- ;;'(mode-line ((t (:background "black" :foreground "gray70" :box (:line-width 4 :color "black")))))
  '(mode-line ((t (:background "ghost white" :foreground "gray50" :height 1.0))))
  '(org-level-1 ((t (:inherit default :weight bold :foreground "#592c21" :font "CMU Concrete" :height 1.1))))
  '(org-level-4 ((t (:inherit default :weight bold :foreground "#592c21" :font "CMU Concrete" :height 1.1))))
@@ -84,7 +83,6 @@
  '(org-meta-line ((t (:inherit (font-lock-comment-face fixed-pitch) :foreground "dim grey" :height 0.6)))) ;; all start with #+
  '(org-property-value ((t (:inherit fixed-pitch :height 0.6))) t)
  '(org-special-keyword ((t (:inherit (font-lock-comment-face fixed-pitch) :height 0.6)))) ;; :id:
- ;;'(org-table ((t (:inherit fixed-pitch :foreground "83a598"))))
  '(org-table ((t (:inherit fixed-pitch :foreground "black"))))
  '(org-tag ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.5))))
  '(org-verbatim ((t (:inherit (shadow fixed-pitch)))))
@@ -143,9 +141,6 @@
 
 (setq awesome-tray-active-modules '("location" "belong" "file-path" "git"))
 (setq awesome-tray-file-path-show-filename 1)
-
-;;(setq awesome-tab-buffer-groups-function
-      ;;(lambda () (list "default")))
 
 (provide 'init-ui)
 ;;; init-ui.el ends here
