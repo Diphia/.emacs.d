@@ -188,3 +188,6 @@
 [submodule "site-lisp/themes"]
 	path = site-lisp/themes
 	url = https://github.com/doomemacs/themes.git
+[submodule "site-lisp/imenu-list"]
+	path = site-lisp/imenu-list
+	url = https://github.com/bmag/imenu-list.git

@@ -176,6 +176,8 @@
   "sb" 'swiper
   "sd" 'counsel-rg-current-directory
   "sp" 'counsel-git-grep
+  "si" 'counsel-imenu
+  "ti" 'imenu-list-smart-toggle
   "x" 'switch-to-scratch
   "y" 'copy-file-path-to-clipboard
   "?" 'counsel-describe-function
