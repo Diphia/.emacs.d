@@ -142,8 +142,11 @@
       scroll-conservatively  10000)
 (setq scroll-margin 10)
 
-(setq awesome-tray-active-modules '("location" "belong" "file-path" "git"))
-(setq awesome-tray-file-path-show-filename 1)
+;(setq awesome-tray-active-modules '("location" "belong" "file-path" "git"))
+;(setq awesome-tray-file-path-show-filename 1)
+
+(require 'doom-modeline)
+(doom-modeline-mode 1)
 
 (provide 'init-ui)
 ;;; init-ui.el ends here
