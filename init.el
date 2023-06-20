@@ -41,4 +41,3 @@
 (require 'init-packages)
 
 (provide 'init)
-;;; init.el ends here

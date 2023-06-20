@@ -19,9 +19,6 @@
 ;;
 ;;; Code:
 
-(set-face-foreground 'default "#a9b7c6")
-(set-background-color "#2B2B2B")
-
 (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
 (add-to-list 'default-frame-alist '(ns-appearance . dark))
 
@@ -66,7 +63,6 @@
 
 (custom-theme-set-faces
  'user
- '(mode-line ((t (:background "ghost white" :foreground "gray50" :height 1.0))))
  '(org-level-1 ((t (:inherit default :weight bold :foreground "#592c21" :font "CMU Concrete" :height 1.1))))
  '(org-level-4 ((t (:inherit default :weight bold :foreground "#592c21" :font "CMU Concrete" :height 1.1))))
  '(org-level-3 ((t (:inherit default :weight bold :foreground "#592c21" :font "CMU Concrete" :height 1.1))))
@@ -106,6 +102,7 @@
                                        ("#+ATTR_ORG:" . "")
                                        ("{toc}" . "§")
                                        ("#+title:" . "")))
+
 ;;(setq prettify-symbols-unprettify-at-point 'right-edge)
 (add-hook 'org-mode-hook 'prettify-symbols-mode)
 
@@ -140,10 +137,11 @@
 
 (setq scroll-step            1
       scroll-conservatively  10000)
-(setq scroll-margin 10)
 
-;(setq awesome-tray-active-modules '("location" "belong" "file-path" "git"))
-;(setq awesome-tray-file-path-show-filename 1)
+(require 'doom-themes)
+(setq doom-themes-enable-bold t    
+      doom-themes-enable-italic t) 
+(load-theme 'doom-oceanic-next t)
 
 (require 'doom-modeline)
 (doom-modeline-mode 1)

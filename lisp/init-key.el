@@ -55,16 +55,11 @@
   (interactive (list (read-directory-name "Path: ")))
   (find-file path))
 
-(defun switch-to-code-mode ()
-  "Switch emacs to code mode"
-  (interactive)
-  (set-face-foreground 'default "#a9b7c6")
-  (set-background-color "#2B2B2B")
-  (setq frame-title-format '("GNU Emacs\n")))
-
 (defun switch-to-org-mode ()
   "Switch emacs to org mode"
   (interactive)
+  (dolist (theme custom-enabled-themes)
+    (disable-theme theme))
   (set-face-foreground 'default "black")
   (set-background-color "white")
   (setq frame-title-format '("Org Mode\n")))
@@ -197,6 +192,8 @@
   (define-key evil-normal-state-map (kbd (format "s-%d" i)) 'awesome-tab-select-visible-tab))
 
 (define-key evil-normal-state-map (kbd "g d") 'lsp-bridge-find-def)
+
+(define-key evil-normal-state-map (kbd "/") 'swiper)
 
 (require 'evil-collection)
 (evil-collection-init)

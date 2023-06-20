@@ -185,3 +185,6 @@
 [submodule "site-lisp/shrink-path.el"]
 	path = site-lisp/shrink-path.el
 	url = https://github.com/zbelial/shrink-path.el.git
+[submodule "site-lisp/themes"]
+	path = site-lisp/themes
+	url = https://github.com/doomemacs/themes.git
