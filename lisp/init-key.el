@@ -62,6 +62,9 @@
     (disable-theme theme))
   (set-face-foreground 'default "black")
   (set-background-color "white")
+  (custom-theme-set-faces
+   'user
+   '(mode-line ((t (:background "ghost white" :foreground "gray50" :height 1.0)))))
   (setq frame-title-format '("Org Mode\n")))
 
 (defun copy-file-path-to-clipboard ()
