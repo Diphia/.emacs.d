@@ -22,6 +22,9 @@
 (set-face-foreground 'default "#a9b7c6")
 (set-background-color "#2B2B2B")
 
+(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+(add-to-list 'default-frame-alist '(ns-appearance . dark))
+
 (setq split-width-threshold 120)
 
 (tool-bar-mode -1)
