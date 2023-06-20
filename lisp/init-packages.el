@@ -27,8 +27,6 @@
 (setq ivy-height 20)
 (setq ivy-initial-inputs-alist nil) ;; by default, ivy will add ^ to restrict the start of string (regex), add this line to remove it
 
-(require 'color-rg)
-
 (require 'counsel)
 (counsel-mode)
 
