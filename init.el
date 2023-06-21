@@ -40,4 +40,6 @@
 
 (require 'init-packages)
 
+(server-mode)
+
 (provide 'init)
