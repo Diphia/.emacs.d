@@ -129,5 +129,7 @@
 (setq imenu-list-focus-after-activation t)
 (setq imenu-list-auto-resize t)
 
+(require 'vterm)
+
 (provide 'init-packages)
 ;;; init-packages.el ends here

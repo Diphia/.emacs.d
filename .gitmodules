@@ -191,3 +191,6 @@
 [submodule "site-lisp/imenu-list"]
 	path = site-lisp/imenu-list
 	url = https://github.com/bmag/imenu-list.git
+[submodule "site-lisp/emacs-libvterm"]
+	path = site-lisp/emacs-libvterm
+	url = https://github.com/akermu/emacs-libvterm.git
