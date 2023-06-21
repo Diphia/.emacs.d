@@ -67,6 +67,17 @@
    '(mode-line ((t (:background "ghost white" :foreground "gray50" :height 1.0)))))
   (setq frame-title-format '("Org Mode\n")))
 
+(defun switch-to-term-mode ()
+  "Switch emacs to org mode and make the font smaller"
+  (interactive)
+  (setq frame-title-format '("vTerm\n"))
+  (set-face-attribute 'default nil :height 140))
+
+(defun my-start-vterm ()
+  "Start a new VTerm buffer."
+  (interactive)
+  (vterm (generate-new-buffer-name "*vterm*")))
+
 (defun copy-file-path-to-clipboard ()
   "Copy the current file path to the clipboard."
   (interactive)
@@ -189,12 +200,24 @@
 (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
 (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
 (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
-(define-key evil-normal-state-map (kbd "C-<tab>") 'awesome-tab-forward-tab)
-(define-key evil-normal-state-map (kbd "C-<S-tab>") 'awesome-tab-backward-tab)
-(define-key evil-normal-state-map (kbd "s-1") 'awesome-tab-select-beg-tab)
-(define-key evil-normal-state-map (kbd "s-9") 'awesome-tab-select-end-tab)
+
+(global-set-key (kbd "C-<tab>") 'awesome-tab-forward-tab)
+(global-set-key (kbd "C-<S-tab>") 'awesome-tab-backward-tab)
+(global-set-key (kbd "s-1") 'awesome-tab-select-beg-tab)
+(global-set-key (kbd "s-9") 'awesome-tab-select-end-tab)
 (dolist (i '(2 3 4 5 6 7 8))
-  (define-key evil-normal-state-map (kbd (format "s-%d" i)) 'awesome-tab-select-visible-tab))
+  (global-set-key (kbd (format "s-%d" i)) 'awesome-tab-select-visible-tab))
+
+(global-set-key (kbd "s-t") 'my-start-vterm)
+(global-set-key (kbd "s-w") 'kill-current-buffer)
+
+(defun my-vterm-cc ()
+  (interactive)
+  (vterm-send-C-c)
+  (evil-insert-state))
+
+(with-eval-after-load 'vterm
+  (define-key vterm-mode-map (kbd "C-c C-c") 'my-vterm-cc))
 
 (define-key evil-normal-state-map (kbd "g d") 'lsp-bridge-find-def)
 
