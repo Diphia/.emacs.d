@@ -98,19 +98,22 @@
         (clipboard-kill-ring-save (point-min) (point-max)))
       (message "Copied file path to clipboard: %s" file-path))))
 
-(defun open-all-links-in-org-mode ()
-  "Open all links in the current org-mode buffer."
+(defun open-links-in-selection ()
+  "Open all Org-mode links in the current Evil visual selection."
   (interactive)
-  (require 'org)
-  (unless (eq major-mode 'org-mode)
-    (error "This function works only in org-mode buffers"))
-  (save-excursion
-    (goto-char (point-min))
-    (while (re-search-forward org-link-any-re nil t)
-      (let ((link (org-element-context)))
-        (when (eq (org-element-type link) 'link)
-          (org-open-at-point-global)
-	  (sleep-for 0.5))))))
+  (defun my-get-evil-visual-selection ()
+    "Get the content of the current Evil visual selection."
+    (let* ((selection-bounds (evil-visual-range))
+	   (beg (car selection-bounds))
+	   (end (cadr selection-bounds))
+	   (selected-text (buffer-substring-no-properties beg end)))
+      (message selected-text)))
+  (let* ((selection (my-get-evil-visual-selection)))
+    (with-temp-buffer
+      (insert selection)
+      (goto-char (point-min))
+      (while (re-search-forward org-bracket-link-regexp nil t)
+        (org-open-at-point-global)))))
 
 (defun my-dired-open-selection ()
   "Open the currently selected files in Dired using the 'open' command."
@@ -186,7 +189,7 @@
   "pp" 'projectile-switch-project
   "sb" 'swiper
   "sd" 'counsel-rg-current-directory
-  "sp" 'counsel-git-grep
+  "sp" 'counsel-rg
   "si" 'counsel-imenu
   "ti" 'imenu-list-smart-toggle
   "x" 'switch-to-scratch
