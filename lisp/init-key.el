@@ -267,48 +267,6 @@ Use 'open' for non-video files and 'mpv' for video files."
   (define-key evil-motion-state-map (kbd "RET") nil)
   (define-key evil-motion-state-map (kbd "TAB") nil))
 
-(defun generate-video-preview ()
-  (interactive)
-  (let ((file-path (dired-get-file-for-visit)))
-    (if file-path
-	(generate-video-preview-file file-path)
-      (message "No file selected!"))))
-
-;;(defun generate-video-preview-file (filepath)
-;;  (let ((command "python3")
-;;        (script "/Users/diphia/temp/1031/preview_gen.py"))
-;;    (message "Running Python script on: %s" filepath)
-;;    (let ((return-value (call-process command nil 0 nil script filepath)))
-;;      (message "Return value: %s" return-value))))
-
-(defun generate-video-preview-file (filepath)
-  (let ((command (format "python3 /Users/diphia/temp/1031/preview_gen.py %s" filepath)))
-    (message "Running Python script on: %s" filepath)
-    (let ((return-value (shell-command command)))
-      (message "Return value: %s" return-value))))
-
-
-(defun display-video-preview ()
-  (interactive)
-  (let ((entry-name (dired-file-name-at-point)))
-    (let ((preview-entry-name (concat "." entry-name ".preview.png")))
-      (window-buffer
-       (display-buffer
-	(get-file-buffer preview-entry-name)
-	t)))))
-
-(defun dired-preview-file ()
-  "Preview current file in Dired mode."
-  (interactive)
-  (when (derived-mode-p 'dired-mode)
-    (let* ((file-name (dired-get-file-for-visit))
-           (preview-file-name (concat (file-name-sans-extension file-name) ".preview.png")))
-      (if (file-exists-p preview-file-name)
-          (save-selected-window
-            (split-window-right)
-            (other-window 1)
-            (find-file preview-file-name))
-        (message "Preview file %s does not exist." preview-file-name)))))
 
 (provide 'init-key)
 ;;; init-key.el ends here
