@@ -166,7 +166,7 @@
 	url = https://github.com/mhayashi1120/Emacs-wgrep.git
 [submodule "site-lisp/peep-dired"]
 	path = site-lisp/peep-dired
-	url = https://github.com/asok/peep-dired.git
+	url = https://github.com/Diphia/peep-dired.git
 [submodule "site-lisp/emacs-async"]
 	path = site-lisp/emacs-async
 	url = https://github.com/jwiegley/emacs-async.git
