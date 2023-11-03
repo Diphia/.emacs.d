@@ -267,6 +267,28 @@ Use 'open' for non-video files and 'mpv' for video files."
   (define-key evil-motion-state-map (kbd "RET") nil)
   (define-key evil-motion-state-map (kbd "TAB") nil))
 
+(defun insert-image-from-clipboard ()
+  "Save the clipboard image to the <current-buffer-file-path>/images/ and insert an org link."
+  (interactive)
+  (let* ((images-dir (concat (file-name-directory (buffer-file-name)) "images/"))
+         (temp-file-path (make-temp-file "clipboard-image" nil ".png"))
+         (md5-hash "")
+         (filename "")
+         (filepath ""))
+    (unless (file-exists-p images-dir)
+      (make-directory images-dir t))
+    (if (zerop (call-process "pngpaste" nil nil nil temp-file-path))
+        (progn
+          (setq md5-hash (with-temp-buffer
+                           (insert-file-contents-literally temp-file-path)
+                           (secure-hash 'md5 (current-buffer))))
+          (setq filename (concat md5-hash ".png"))
+          (setq filepath (concat images-dir filename))
+          (rename-file temp-file-path filepath t)
+          (insert (format "[[file:%s]]" filepath))
+          (message "Image saved and link inserted."))
+      (error "Failed to paste image from clipboard"))))
+
 
 (provide 'init-key)
 ;;; init-key.el ends here
