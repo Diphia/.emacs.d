@@ -184,7 +184,10 @@ Use 'open' for non-video files and 'mpv' for video files."
   "fp" (lambda () (interactive) (quick-open "~/.emacs.d/init.el"))
   "fs" (lambda () (interactive) (quick-open "~/.ssh/config"))
   "v" (lambda () (interactive) (quick-open (concat org-directory "snippet.org")))
-  "j" (lambda () (interactive) (quick-open (concat org-directory "roam/20220612104302-journal.org")))
+  "j" (lambda ()
+	(interactive)
+	(quick-open (concat org-directory "roam/journal.org"))
+	(org-jump-to-today))
   "c" (lambda () (interactive) (quick-open "/tmp/main.chat.org"))
   "gg" 'magit-status
   "tp" 'open-femp-python
@@ -289,6 +292,12 @@ Use 'open' for non-video files and 'mpv' for video files."
           (message "Image saved and link inserted."))
       (error "Failed to paste image from clipboard"))))
 
+
+(defun org-jump-to-today ()
+  (interactive)
+  (let ((today (format-time-string "%Y-%m-%d")))
+    (goto-char (point-min))
+    (search-forward today nil t)))
 
 (provide 'init-key)
 ;;; init-key.el ends here
