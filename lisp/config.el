@@ -40,6 +40,7 @@
 
 (org-babel-do-load-languages
  'org-babel-load-languages '((python . t)
+			     (shell . t)
 			     (emacs-lisp . t)))
 
 (setq make-backup-files nil)

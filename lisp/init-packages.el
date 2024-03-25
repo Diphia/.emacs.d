@@ -131,5 +131,7 @@
 
 (require 'vterm)
 
+(add-hook 'c-mode-hook (lambda () (setq c-basic-offset 4)))
+
 (provide 'init-packages)
 ;;; init-packages.el ends here
