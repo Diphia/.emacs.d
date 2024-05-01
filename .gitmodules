@@ -167,9 +167,6 @@
 [submodule "site-lisp/peep-dired"]
 	path = site-lisp/peep-dired
 	url = https://github.com/Diphia/peep-dired.git
-[submodule "site-lisp/emacs-async"]
-	path = site-lisp/emacs-async
-	url = https://github.com/jwiegley/emacs-async.git
 [submodule "site-lisp/dired-hacks"]
 	path = site-lisp/dired-hacks
 	url = https://github.com/Fuco1/dired-hacks.git
@@ -194,3 +191,9 @@
 [submodule "site-lisp/emacs-libvterm"]
 	path = site-lisp/emacs-libvterm
 	url = https://github.com/akermu/emacs-libvterm.git
+[submodule "site-lisp/tmtxt-dired-async"]
+	path = site-lisp/tmtxt-dired-async
+	url = git@github.com:tmtxt/tmtxt-dired-async.git
+[submodule "site-lisp/tmtxt-async-tasks"]
+	path = site-lisp/tmtxt-async-tasks
+	url = git@github.com:tmtxt/tmtxt-async-tasks.git

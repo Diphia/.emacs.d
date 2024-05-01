@@ -246,6 +246,7 @@ Use 'open' for non-video files and 'mpv' for video files."
     (evil-define-key 'normal dired-mode-map (kbd "s") 'my-dired-sort)
     (evil-define-key 'normal dired-mode-map (kbd "d") 'my-dired-jump)
     (evil-define-key 'normal dired-mode-map (kbd "<tab>") 'dired-subtree-toggle)
+    (evil-define-key 'normal dired-mode-map (kbd "C") 'tda/rsync)
     ))
 
 (defun toggle-j-k-keys-for-peep ()

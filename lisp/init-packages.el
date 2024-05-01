@@ -45,9 +45,10 @@
 (require 'peep-dired)
 (setq peep-dired-ignored-extensions '("elc" "mkv" "webm" "mp4" "mp3" "ogg" "iso" "mat" "exe" "dmg" "pcap"))
 
-(require 'dired-async)
-(dired-async-mode 1)
 (require 'dired-subtree)
+
+(require 'tmtxt-async-tasks)
+(require 'tmtxt-dired-async)
 
 (require 'rg)
 
