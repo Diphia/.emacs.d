@@ -161,9 +161,6 @@
 [submodule "site-lisp/Emacs-wgrep"]
 	path = site-lisp/Emacs-wgrep
 	url = https://github.com/mhayashi1120/Emacs-wgrep.git
-[submodule "site-lisp/peep-dired"]
-	path = site-lisp/peep-dired
-	url = https://github.com/Diphia/peep-dired.git
 [submodule "site-lisp/dired-hacks"]
 	path = site-lisp/dired-hacks
 	url = https://github.com/Fuco1/dired-hacks.git
@@ -194,3 +191,6 @@
 [submodule "site-lisp/tmtxt-async-tasks"]
 	path = site-lisp/tmtxt-async-tasks
 	url = git@github.com:tmtxt/tmtxt-async-tasks.git
+[submodule "site-lisp/peep-dired"]
+	path = site-lisp/peep-dired
+	url = git@github.com:Diphia/peep-dired.git
