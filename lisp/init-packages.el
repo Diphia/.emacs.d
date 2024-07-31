@@ -102,11 +102,6 @@
 (define-key evil-normal-state-map "u" 'undo-tree-undo)
 (define-key evil-normal-state-map (kbd "C-r") 'undo-tree-redo)
 
-(require 'plantuml-mode)
-(setq org-plantuml-jar-path (expand-file-name "/Applications/plantuml-1.2022.5.jar"))
-(add-to-list 'org-src-lang-modes '("plantuml" . plantuml))
-(org-babel-do-load-languages 'org-babel-load-languages '((plantuml . t)))
-
 (setenv "PATH" (concat "/usr/texbin:/usr/local/bin:" (getenv "PATH")))
 (setq exec-path (append '("/usr/texbin" "/usr/local/bin") exec-path))
 (load "auctex.el" nil t t)
