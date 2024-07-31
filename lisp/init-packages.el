@@ -130,8 +130,6 @@
 (setq imenu-list-focus-after-activation t)
 (setq imenu-list-auto-resize t)
 
-(require 'vterm)
-
 (add-hook 'c-mode-hook (lambda () (setq c-basic-offset 4)))
 
 (provide 'init-packages)
