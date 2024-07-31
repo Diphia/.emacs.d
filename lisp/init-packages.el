@@ -117,8 +117,6 @@
 (require 'awesome-tab)
 (awesome-tab-mode t)
 
-(require 'mind-wave)
-
 (require 'presentation)
 
 (require 'posframe)
