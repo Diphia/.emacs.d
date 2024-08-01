@@ -188,7 +188,6 @@ Use 'open' for non-video files and 'mpv' for video files."
 	(interactive)
 	(quick-open (concat org-directory "roam/journal.org"))
 	(org-jump-to-today))
-  "c" (lambda () (interactive) (quick-open "/tmp/main.chat.org"))
   "gg" 'magit-status
   "tp" 'open-femp-python
   "nrf" 'org-roam-node-find
@@ -202,7 +201,8 @@ Use 'open' for non-video files and 'mpv' for video files."
   "si" 'counsel-imenu
   "ti" 'imenu-list-smart-toggle
   "x" 'switch-to-scratch
-  "y" 'copy-file-path-to-clipboard
+  "yf" 'copy-file-path-to-clipboard
+  "yy" 'copy-line-strip-whitespace
   "?" 'counsel-describe-function
   "[" (lambda () (interactive) (shrink-window-horizontally 40))
   "]" (lambda () (interactive) (enlarge-window-horizontally 40)))
@@ -293,12 +293,18 @@ Use 'open' for non-video files and 'mpv' for video files."
           (message "Image saved and link inserted."))
       (error "Failed to paste image from clipboard"))))
 
-
 (defun org-jump-to-today ()
   (interactive)
   (let ((today (format-time-string "%Y-%m-%d")))
     (goto-char (point-min))
     (search-forward today nil t)))
+
+(defun copy-line-strip-whitespace ()
+  "Copy the current line and strip leading/trailing whitespace."
+  (interactive)
+  (let ((line (buffer-substring (line-beginning-position) (line-end-position))))
+    (kill-new (string-trim line)))
+  (message "command line copied to clipboard"))
 
 (provide 'init-key)
 ;;; init-key.el ends here
