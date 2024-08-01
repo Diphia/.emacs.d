@@ -21,29 +21,28 @@
 
 (require 'magit)
 
-(require 'ivy)
-(ivy-mode)
-(define-key ivy-minibuffer-map [escape] 'minibuffer-keyboard-quit) ;; use escape key to quit minibuffer
-(setq ivy-height 20)
-(setq ivy-initial-inputs-alist nil) ;; by default, ivy will add ^ to restrict the start of string (regex), add this line to remove it
-
-(require 'counsel)
-(counsel-mode)
-
 (require 'swiper)
+(with-eval-after-load 'ivy
+  (ivy-mode)
+  (define-key ivy-minibuffer-map [escape] 'minibuffer-keyboard-quit)
+  (setq ivy-height 20)
+  (setq ivy-initial-inputs-alist nil))
+
+(require 'counsel-projectile)
+(with-eval-after-load 'counsel
+  (counsel-mode))
 
 (require 'smex)
 
 (require 'which-key)
-(which-key-mode)
-
-(require 'org-roam)
-(setq org-directory "/Users/diphia/org-files/")
-(setq org-roam-directory "/Users/diphia/org-files/roam")
+(with-eval-after-load 'which-key
+  (which-key-mode))
 
 (require 'fd-dired)
 (require 'peep-dired)
-(setq peep-dired-ignored-extensions '("elc" "mkv" "webm" "mp4" "mp3" "ogg" "iso" "mat" "exe" "dmg" "pcap"))
+(with-eval-after-load 'peep-dired
+  (setq peep-dired-max-size 500000000)
+  (setq peep-dired-ignored-extensions '("elc" "webm" "mp3" "ogg" "iso" "mat" "exe" "dmg" "pcap")))
 
 (require 'dired-subtree)
 
@@ -53,33 +52,30 @@
 (require 'rg)
 
 (require 'yasnippet)
-(setq yas-snippet-dirs '("~/.emacs.d/snippets"))
-(yas-global-mode 1)
+(with-eval-after-load 'yasnippet
+  (setq yas-snippet-dirs '("~/.emacs.d/snippets"))
+  (yas-global-mode 1))
 
 (custom-set-variables
  '(org-agenda-files (list "/Users/diphia/org-files/agenda.org")))
 
-(require 'ox-confluence)
-(with-eval-after-load 'ox
-  (require 'ox-hugo))
-
-(require 'dockerfile-mode)
+(autoload 'dockerfile-mode "dockerfile-mode" nil t)
 (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
 
-(require 'yaml-mode)
+(autoload 'yaml-mode "yaml-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.ya?ml\\'" . yaml-mode))
 
 (add-to-list 'auto-mode-alist '("\\.scpt$" . applescript-mode))
 
-(require 'lua-mode)
+(autoload 'lua-mode "lua-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
 (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
 
-(require 'racket-mode)
+(autoload 'racket-mode "racket-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.scm$" . racket-mode))
 (add-to-list 'interpreter-mode-alist '("scm" . racket-mode))
 
-(require 'json-mode)
+(autoload 'json-mode "json-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
 
 (setq python-shell-interpreter "python3")
@@ -88,19 +84,32 @@
 (require 'projectile)
 (projectile-mode)
 
-(require 'ledger-mode)
+(autoload 'ledger-mode "ledger-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.ledger$" . ledger-mode))
 
-(require 'counsel-projectile)
+(eval-after-load 'org
+  '(progn
+	 (setq org-directory "/Users/diphia/org-files/")
+     (require 'evil-org)
+	 (require 'ox)
+	 (require 'org-roam)
+	 (add-hook 'org-mode-hook 'evil-org-mode)
+     (evil-org-set-key-theme '(navigation insert textobjects additional calendar))
+     (require 'evil-org-agenda)
+     (evil-org-agenda-set-keys)))
 
-(require 'evil-org)
-(add-hook 'org-mode-hook 'evil-org-mode)
-(evil-org-set-key-theme '(navigation insert textobjects additional calendar))
-(require 'evil-org-agenda)
-(evil-org-agenda-set-keys)
+(with-eval-after-load 'ox
+  (require 'ox-confluence)
+  (require 'ox-hugo))
 
-(require 'undo-tree)
-(define-key evil-normal-state-map "u" 'undo-tree-undo)
-(define-key evil-normal-state-map (kbd "C-r") 'undo-tree-redo)
+(with-eval-after-load 'org-roam
+  (setq org-roam-directory "/Users/diphia/org-files/roam"))
+
+(eval-after-load 'evil
+  '(progn
+     (require 'undo-tree)
+     (define-key evil-normal-state-map "u" 'undo-tree-undo)
+     (define-key evil-normal-state-map (kbd "C-r") 'undo-tree-redo)))
 
 (setenv "PATH" (concat "/usr/texbin:/usr/local/bin:" (getenv "PATH")))
 (setq exec-path (append '("/usr/texbin" "/usr/local/bin") exec-path))
@@ -108,9 +117,6 @@
 (load "preview-latex.el" nil t t)
 (plist-put org-format-latex-options :scale 1.5)
 (org-babel-do-load-languages 'org-babel-load-languages '((latex . t)))
-
-(require 'awesome-tab)
-(awesome-tab-mode t)
 
 (require 'presentation)
 
