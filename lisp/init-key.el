@@ -65,6 +65,32 @@
   (custom-theme-set-faces
    'user
    '(mode-line ((t (:background "ghost white" :foreground "gray50" :height 1.0)))))
+  (custom-theme-set-faces
+   'user
+   '(org-level-1 ((t (:inherit default :weight bold :foreground "#592c21" :font "CMU Concrete" :height 1.1))))
+   '(org-level-4 ((t (:inherit default :weight bold :foreground "#592c21" :font "CMU Concrete" :height 1.1))))
+   '(org-level-3 ((t (:inherit default :weight bold :foreground "#592c21" :font "CMU Concrete" :height 1.1))))
+   '(org-level-2 ((t (:inherit default :weight bold :foreground "#592c21" :font "CMU Concrete" :height 1.2))))
+   '(org-level-1 ((t (:inherit default :weight bold :foreground "#592c21" :font "CMU Concrete" :height 1.3))))
+   '(org-document-title ((t (:inherit default :weight bold :foreground "#592c21" :font "CMU Concrete" :height 1.5 :underline nil))))
+   '(org-block ((t (:inherit fixed-pitch :background "ghost white"))))
+   '(org-block-begin-line ((t (:foreground "dim grey" :background "ghost white"))))
+   '(org-quote ((t (:slant italic :foreground "dim gray" :background "ghost white"))))
+   '(org-code ((t (:inherit (shadow fixed-pitch) :foreground "chocolate"))))
+   '(org-drawer ((t (:foreground "dim grey" :height 0.5)))) ;; :PROPERTIES:
+   '(org-document-info ((t (:foreground "dark orange"))))
+   '(org-document-info-keyword ((t (:inherit (shadow fixed-pitch) :foreground "dim grey"))))
+   '(org-date ((t (:underline t :foreground "firebrick"))))
+   '(org-indent ((t (:inherit (org-hide fixed-pitch)))))
+   '(org-link ((t (:foreground "royal blue" :underline t))))
+   '(org-meta-line ((t (:inherit (font-lock-comment-face fixed-pitch) :foreground "dim grey" :height 0.6)))) ;; all start with #+
+   '(org-property-value ((t (:inherit fixed-pitch :height 0.6))) t)
+   '(org-special-keyword ((t (:inherit (font-lock-comment-face fixed-pitch) :height 0.6)))) ;; :id:
+   '(org-table ((t (:inherit fixed-pitch :foreground "black"))))
+   '(org-tag ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.5))))
+   '(org-verbatim ((t (:inherit (shadow fixed-pitch)))))
+   '(variable-pitch ((t (:family "CMU Concrete" :height 200 :weight normal))))
+   '(fixed-pitch ((t ( :family "Monaco" :height 180)))))
   (setq frame-title-format '("Org Mode\n")))
 
 (defun switch-to-term-mode ()
@@ -184,6 +210,7 @@ Use 'open' for non-video files and 'mpv' for video files."
   "fp" (lambda () (interactive) (quick-open "~/.emacs.d/init.el"))
   "fs" (lambda () (interactive) (quick-open "~/.ssh/config"))
   "v" (lambda () (interactive) (quick-open (concat org-directory "snippet.org")))
+  "h" (lambda () (interactive) (quick-open (concat org-directory "home.org")))
   "j" (lambda ()
 	(interactive)
 	(quick-open (concat org-directory "roam/journal.org"))

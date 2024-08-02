@@ -61,32 +61,32 @@
 
 (setq org-fontify-quote-and-verse-blocks t) ;; enable to define quote and verse block style
 
-(custom-theme-set-faces
- 'user
- '(org-level-1 ((t (:inherit default :weight bold :foreground "#592c21" :font "CMU Concrete" :height 1.1))))
- '(org-level-4 ((t (:inherit default :weight bold :foreground "#592c21" :font "CMU Concrete" :height 1.1))))
- '(org-level-3 ((t (:inherit default :weight bold :foreground "#592c21" :font "CMU Concrete" :height 1.1))))
- '(org-level-2 ((t (:inherit default :weight bold :foreground "#592c21" :font "CMU Concrete" :height 1.2))))
- '(org-level-1 ((t (:inherit default :weight bold :foreground "#592c21" :font "CMU Concrete" :height 1.3))))
- '(org-document-title ((t (:inherit default :weight bold :foreground "#592c21" :font "CMU Concrete" :height 1.5 :underline nil))))
- '(org-block ((t (:inherit fixed-pitch :background "ghost white"))))
- '(org-block-begin-line ((t (:foreground "dim grey" :background "ghost white"))))
- '(org-quote ((t (:slant italic :foreground "dim gray" :background "ghost white"))))
- '(org-code ((t (:inherit (shadow fixed-pitch) :foreground "chocolate"))))
- '(org-drawer ((t (:foreground "dim grey" :height 0.5)))) ;; :PROPERTIES:
- '(org-document-info ((t (:foreground "dark orange"))))
- '(org-document-info-keyword ((t (:inherit (shadow fixed-pitch) :foreground "dim grey"))))
- '(org-date ((t (:underline t :foreground "firebrick"))))
- '(org-indent ((t (:inherit (org-hide fixed-pitch)))))
- '(org-link ((t (:foreground "royal blue" :underline t))))
- '(org-meta-line ((t (:inherit (font-lock-comment-face fixed-pitch) :foreground "dim grey" :height 0.6)))) ;; all start with #+
- '(org-property-value ((t (:inherit fixed-pitch :height 0.6))) t)
- '(org-special-keyword ((t (:inherit (font-lock-comment-face fixed-pitch) :height 0.6)))) ;; :id:
- '(org-table ((t (:inherit fixed-pitch :foreground "black"))))
- '(org-tag ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.5))))
- '(org-verbatim ((t (:inherit (shadow fixed-pitch)))))
- '(variable-pitch ((t (:family "CMU Concrete" :height 200 :weight normal))))
- '(fixed-pitch ((t ( :family "Monaco" :height 180)))))
+;(custom-theme-set-faces
+; 'user
+; '(org-level-1 ((t (:inherit default :weight bold :foreground "#592c21" :font "CMU Concrete" :height 1.1))))
+; '(org-level-4 ((t (:inherit default :weight bold :foreground "#592c21" :font "CMU Concrete" :height 1.1))))
+; '(org-level-3 ((t (:inherit default :weight bold :foreground "#592c21" :font "CMU Concrete" :height 1.1))))
+; '(org-level-2 ((t (:inherit default :weight bold :foreground "#592c21" :font "CMU Concrete" :height 1.2))))
+; '(org-level-1 ((t (:inherit default :weight bold :foreground "#592c21" :font "CMU Concrete" :height 1.3))))
+; '(org-document-title ((t (:inherit default :weight bold :foreground "#592c21" :font "CMU Concrete" :height 1.5 :underline nil))))
+; '(org-block ((t (:inherit fixed-pitch :background "ghost white"))))
+; '(org-block-begin-line ((t (:foreground "dim grey" :background "ghost white"))))
+; '(org-quote ((t (:slant italic :foreground "dim gray" :background "ghost white"))))
+; '(org-code ((t (:inherit (shadow fixed-pitch) :foreground "chocolate"))))
+; '(org-drawer ((t (:foreground "dim grey" :height 0.5)))) ;; :PROPERTIES:
+; '(org-document-info ((t (:foreground "dark orange"))))
+; '(org-document-info-keyword ((t (:inherit (shadow fixed-pitch) :foreground "dim grey"))))
+; '(org-date ((t (:underline t :foreground "firebrick"))))
+; '(org-indent ((t (:inherit (org-hide fixed-pitch)))))
+; '(org-link ((t (:foreground "royal blue" :underline t))))
+; '(org-meta-line ((t (:inherit (font-lock-comment-face fixed-pitch) :foreground "dim grey" :height 0.6)))) ;; all start with #+
+; '(org-property-value ((t (:inherit fixed-pitch :height 0.6))) t)
+; '(org-special-keyword ((t (:inherit (font-lock-comment-face fixed-pitch) :height 0.6)))) ;; :id:
+; '(org-table ((t (:inherit fixed-pitch :foreground "black"))))
+; '(org-tag ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.5))))
+; '(org-verbatim ((t (:inherit (shadow fixed-pitch)))))
+; '(variable-pitch ((t (:family "CMU Concrete" :height 200 :weight normal))))
+; '(fixed-pitch ((t ( :family "Monaco" :height 180)))))
 
 (set-fontset-font t 'unicode (font-spec :family "Apple Color Emoji" :height 200))
 (set-fontset-font t '(#x2ff0 . #x9ffc) (font-spec :family "Sarasa Mono Slab SC" :height 200 :weight 'normal))
