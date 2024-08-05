@@ -210,7 +210,7 @@ Use 'open' for non-video files and 'mpv' for video files."
   "fp" (lambda () (interactive) (quick-open "~/.emacs.d/init.el"))
   "fs" (lambda () (interactive) (quick-open "~/.ssh/config"))
   "v" (lambda () (interactive) (quick-open (concat org-directory "snippet.org")))
-  "h" (lambda () (interactive) (quick-open (concat org-directory "home.org")))
+  "1" (lambda () (interactive) (quick-open (concat org-directory "home.org")))
   "j" (lambda ()
 	(interactive)
 	(quick-open (concat org-directory "roam/journal.org"))
