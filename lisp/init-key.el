@@ -174,6 +174,7 @@ Use 'open' for non-video files and 'mpv' for video files."
   '((?1 . "~")
     (?v . "/Volumes")
     (?t . "~/temp")
+    (?c . "~/Code")
     (?o . "~/Documents")
     (?e . "~/Desktop")
     (?d . "~/Downloads"))
