@@ -46,9 +46,6 @@
 
 (require 'dired-subtree)
 
-(require 'tmtxt-async-tasks)
-(require 'tmtxt-dired-async)
-
 (require 'rg)
 
 (require 'yasnippet)
@@ -57,7 +54,7 @@
   (yas-global-mode 1))
 
 (custom-set-variables
- '(org-agenda-files (list "/Users/diphia/org-files/agenda.org")))
+ '(org-agenda-files (list "~/org-files/agenda.org")))
 
 (autoload 'dockerfile-mode "dockerfile-mode" nil t)
 (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
@@ -89,7 +86,7 @@
 
 (eval-after-load 'org
   '(progn
-	 (setq org-directory "/Users/diphia/org-files/")
+	 (setq org-directory "~/org-files/")
      (require 'evil-org)
 	 (require 'ox)
 	 (require 'org-roam)
@@ -103,7 +100,7 @@
   (require 'ox-hugo))
 
 (with-eval-after-load 'org-roam
-  (setq org-roam-directory "/Users/diphia/org-files/roam"))
+  (setq org-roam-directory "~/org-files/roam"))
 
 (eval-after-load 'evil
   '(progn

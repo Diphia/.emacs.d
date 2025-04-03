@@ -176,12 +176,6 @@
 [submodule "site-lisp/imenu-list"]
 	path = site-lisp/imenu-list
 	url = https://github.com/bmag/imenu-list.git
-[submodule "site-lisp/tmtxt-dired-async"]
-	path = site-lisp/tmtxt-dired-async
-	url = git@github.com:tmtxt/tmtxt-dired-async.git
-[submodule "site-lisp/tmtxt-async-tasks"]
-	path = site-lisp/tmtxt-async-tasks
-	url = git@github.com:tmtxt/tmtxt-async-tasks.git
 [submodule "site-lisp/peep-dired"]
 	path = site-lisp/peep-dired
 	url = git@github.com:Diphia/peep-dired.git
