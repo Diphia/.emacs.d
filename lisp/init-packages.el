@@ -119,9 +119,6 @@
 
 (require 'posframe)
 
-(require 'lsp-bridge)
-(global-lsp-bridge-mode)
-
 (require 'imenu-list)
 (setq imenu-list-focus-after-activation t)
 (setq imenu-list-auto-resize t)
