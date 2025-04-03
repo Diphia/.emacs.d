@@ -36,7 +36,7 @@
 (setq insert-directory-program "/usr/local/bin/gls" dired-use-ls-dired t)
 (setq dired-listing-switches "-alh --group-directories-first")
 
-(add-hook 'prog-mode-hook 'linum-mode)
+;;(add-hook 'prog-mode-hook 'linum-mode)
 (add-hook 'prog-mode-hook 'show-paren-mode)
 (add-hook 'org-mode-hook (lambda () (show-paren-mode 0)))
 
@@ -102,13 +102,16 @@
 (require 'valign)
 (add-hook 'org-mode-hook #'valign-mode)
 
-;; show link message when hovering
 (defun link-message ()
-  (let ((object (org-element-context)))
-    (when (eq (car object) 'link)
-      (message "%s"
-           (org-element-property :raw-link object)))))
-(add-hook 'post-command-hook 'link-message)
+  (when (derived-mode-p 'org-mode)
+    (let ((object (org-element-context)))
+      (when (eq (car object) 'link)
+        (message "%s" (org-element-property :raw-link object))))))
+
+(add-hook 'org-mode-hook
+          (lambda ()
+            (add-hook 'post-command-hook #'link-message nil :local)))
+
 
 (setq scroll-step            1
       scroll-conservatively  10000)
