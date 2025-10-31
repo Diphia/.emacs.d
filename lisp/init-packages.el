@@ -99,6 +99,8 @@
   (require 'ox-confluence)
   (require 'ox-hugo))
 
+(require 'markdown-mode)
+
 (with-eval-after-load 'org-roam
   (setq org-roam-directory "~/org-files/roam"))
 
