@@ -29,6 +29,11 @@
 (setq frame-title-format '("GNU Emacs\n"))
 (set-face-attribute 'default nil :font "Monaco" :height 180);;
 
+;; Show line numbers everywhere except org buffers.
+(global-display-line-numbers-mode 1)
+(add-hook 'org-mode-hook (lambda () (display-line-numbers-mode -1)))
+(add-hook 'dired-mode-hook (lambda () (display-line-numbers-mode -1)))
+
 (add-hook 'dired-mode-hook (lambda () (dired-hide-details-mode 1)))
 (setq dired-dwim-target t)
 (add-hook 'dired-mode-hook 'auto-revert-mode)
