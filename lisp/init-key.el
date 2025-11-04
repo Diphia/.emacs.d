@@ -214,7 +214,7 @@ Use 'open' for non-video files and 'mpv' for video files."
   "1" (lambda () (interactive) (quick-open (concat org-directory "home.org")))
   "j" (lambda ()
 	(interactive)
-	(quick-open (concat org-directory "roam/journal.org"))
+	(quick-open (concat org-directory "journal.org"))
 	(org-jump-to-today))
   "gg" 'magit-status
   "tp" 'open-femp-python
