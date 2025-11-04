@@ -84,7 +84,7 @@
 (autoload 'ledger-mode "ledger-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.ledger$" . ledger-mode))
 (with-eval-after-load 'ledger-mode
-  (setq-default ledger-master-file (expand-file-name "~/code/ledger/all.ledger")))
+  (setq-default ledger-master-file (expand-file-name "~/code/ledger/data/all.ledger")))
 
 (eval-after-load 'org
   '(progn
