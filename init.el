@@ -40,6 +40,8 @@
 
 (require 'init-packages)
 
+(require 'ai)
+
 (server-mode)
 
 (provide 'init)
