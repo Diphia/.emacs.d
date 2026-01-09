@@ -1,7 +1,7 @@
-;;; ai.el --- Helpers for summoning Codex agents -*- lexical-binding: t; -*-
+;;; ai.el --- Helpers for summoning Claude agents -*- lexical-binding: t; -*-
 
 ;;; Commentary:
-;; Interactive helpers for launching Codex workflows from Emacs.
+;; Interactive helpers for launching Claude workflows from Emacs.
 
 ;;; Code:
 
@@ -27,9 +27,9 @@
     (use-local-map map)))
 
 (defun agent-summon (&optional preset-prompt)
-  "Launch Codex in a macOS Terminal for the current buffer's directory.
+  "Launch Claude in a macOS Terminal for the current buffer's directory.
 
-If PRESET-PROMPT is provided (interactively or via Lisp), Codex is
+If PRESET-PROMPT is provided (interactively or via Lisp), Claude is
 invoked immediately using that prompt.  Otherwise a dedicated buffer
 is opened so the user can compose a prompt which is submitted with
 `C-c C-c'."
@@ -41,7 +41,7 @@ is opened so the user can compose a prompt which is submitted with
       (agent-summon--prepare-prompt dir))))
 
 (defun agent-summon-commit-and-push ()
-  "Open Codex to stage, commit, and push the current repository."
+  "Open Claude to stage, commit, and push the current repository."
   (interactive)
   (agent-summon agent-summon-commit-prompt))
 
@@ -54,10 +54,10 @@ is opened so the user can compose a prompt which is submitted with
       (setq agent-summon--pending-directory directory))
     (pop-to-buffer buffer)
     (goto-char (point-min))
-    (message "Compose Codex prompt, then press C-c C-c to launch.")))
+    (message "Compose Claude prompt, then press C-c C-c to launch.")))
 
 (defun agent-summon--submit ()
-  "Finalize the prompt buffer and launch Codex."
+  "Finalize the prompt buffer and launch Claude."
   (interactive)
   (let ((prompt (string-trim (buffer-string)))
         (dir agent-summon--pending-directory))
@@ -83,12 +83,12 @@ end tell"
              (agent-summon--osascript-escape command)))))
 
 (defun agent-summon--build-command (directory prompt)
-  "Create the shell COMMAND to run Codex in DIRECTORY with PROMPT."
+  "Create the shell COMMAND to run Claude in DIRECTORY with PROMPT."
   (let* ((expanded (expand-file-name directory))
          (cd-part (format "cd %s" (shell-quote-argument expanded))))
     (if (string-empty-p (string-trim (or prompt "")))
-        (format "%s && codex --yolo" cd-part)
-      (format "%s && codex --yolo \"%s\""
+        (format "%s && claude --dangerously-skip-permissions" cd-part)
+      (format "%s && claude --dangerously-skip-permissions \"%s\""
               cd-part
               (agent-summon--shell-escape-argument prompt)))))
 
@@ -115,7 +115,7 @@ end tell"
   (unless (fboundp 'do-applescript)
     (user-error "AppleScript integration is unavailable in this Emacs build"))
   (do-applescript script)
-  (message "Codex launched in Terminal."))
+  (message "Claude launched in Terminal."))
 
 (provide 'ai)
 
