@@ -90,7 +90,7 @@
    '(org-tag ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.5))))
    '(org-verbatim ((t (:inherit (shadow fixed-pitch)))))
    '(variable-pitch ((t (:family "CMU Concrete" :height 200 :weight normal))))
-   '(fixed-pitch ((t ( :family "Monaco" :height 180)))))
+   '(fixed-pitch ((t (:inherit default :family "Monaco")))))
   (setq frame-title-format '("Org Mode\n")))
 
 (defun switch-to-term-mode ()
